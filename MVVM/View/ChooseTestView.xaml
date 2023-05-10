@@ -1,0 +1,79 @@
+﻿<UserControl x:Class="DiplomaProject.MVVM.View.ChooseTestView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DiplomaProject.MVVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="564" 
+             d:DesignWidth="825"
+             Background="Transparent"
+             x:Name="ChooseTestPage"
+             BorderBrush="Transparent"
+             BorderThickness="0">
+    
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+        
+        <!--Правила прохождения тестов-->
+        <TextBlock x:Name="RulesTxtBlk"
+                   Margin="10"
+                   HorizontalAlignment="Stretch"
+                   Foreground="White"
+                   FontSize="24"
+                   FontFamily="Rubik"
+                   TextAlignment="Justify">
+            
+            Для прохождения теста вам потребуется ответить на 10 вопросов.<LineBreak/>
+            Вам могут встретиться вопросы где требуется:<LineBreak/>
+            - 1 ответ,<LineBreak/>
+            - несколько ответов,<LineBreak/>
+            - текстовое поле для ввода ответа.<LineBreak/>
+            Для каждого типа вопроса не ответ отводится определенное время:<LineBreak/>
+            1 ответ - 30 секунд<LineBreak/>
+            больше 1 ответа - 60 секунд<LineBreak/>
+            текстовое поле - 90 секунд.<LineBreak/>
+            После завершения теста Вам будет высталвена оценка<LineBreak/> 
+            в соответствии со следующими критериями:<LineBreak/>
+            0 - 4 правильных ответов: оценка 2<LineBreak/>
+            5 - 6 правильных ответов: оценка 3<LineBreak/>
+            7 - 8 правильных ответов: оценка 4<LineBreak/>
+            9 - 10 правильных ответов: оценка 5<LineBreak/>
+            
+            
+        </TextBlock>
+        
+        <!--Панель с кнопками для выбора теста-->
+        <StackPanel x:Name="StartTestPanel"
+                    Grid.Row="1"
+                    Orientation="Horizontal">
+            <Button x:Name="Test1Btn"
+                    Height="50"
+                    Width="150"
+                    Margin="50,0,137,10"
+                    Content="Тест 1"
+                    FontFamily="Rubik Medium"
+                    FontSize="20"/>
+            <Button x:Name="Test2Btn"
+                    Height="50"
+                    Width="150"
+                    Content="Тест 2"
+                    FontFamily="Rubik Medium"
+                    FontSize="20"
+                    Margin="0,0,0,10" Cursor="Hand"/>
+            <Button x:Name="Test3Btn"
+                    Height="50"
+                    Width="150"
+                    Margin="138,0,50,10"
+                    Content="Тест 3"
+                    FontFamily="Rubik Medium"
+                    FontSize="20"/>
+
+        </StackPanel>
+        
+    </Grid>
+</UserControl>

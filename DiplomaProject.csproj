@@ -1,0 +1,62 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="MVVM\ViewModel\TheoryPageViewModel.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\about_icon.png" />
+    <None Remove="Assets\challenge_icon.png" />
+    <None Remove="Assets\ecp_icon.png" />
+    <None Remove="Assets\expand_icon.png" />
+    <None Remove="Assets\HelloView.png" />
+    <None Remove="Assets\linux_icon.png" />
+    <None Remove="Assets\mac_icon.png" />
+    <None Remove="Assets\plugin_icon.png" />
+    <None Remove="Assets\setup_icon.png" />
+    <None Remove="Assets\test_icon.png" />
+    <None Remove="Assets\theory_icon.png" />
+    <None Remove="Assets\windows_icon.png" />
+    <None Remove="MVVM\View\ecp_icon.png" />
+    <None Remove="MVVM\View\HelloView.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Remove="Styles\MenuButtonsStyle.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MaterialDesignThemes" Version="4.8.0" />
+    <PackageReference Include="MySql.Data" Version="8.0.32.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="MVVM\Model\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\about_icon.png" />
+    <Resource Include="Assets\challenge_icon.png" />
+    <EmbeddedResource Include="Assets\ecp_icon.png" />
+    <Resource Include="Assets\expand_icon.png" />
+    <Resource Include="Assets\HelloView.png" />
+    <Resource Include="Assets\linux_icon.png" />
+    <Resource Include="Assets\mac_icon.png" />
+    <Resource Include="Assets\plugin_icon.png" />
+    <Resource Include="Assets\setup_icon.png" />
+    <Resource Include="Assets\test_icon.png" />
+    <Resource Include="Assets\theory_icon.png" />
+    <Resource Include="Assets\windows_icon.png" />
+    <Resource Include="MVVM\View\ecp_icon.png" />
+    <Resource Include="MVVM\View\HelloView.png" />
+    <Resource Include="Styles\MenuButtonsStyle.xaml" />
+  </ItemGroup>
+
+</Project>

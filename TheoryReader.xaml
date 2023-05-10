@@ -1,0 +1,45 @@
+﻿<Window x:Class="DiplomaProject.TheoryReader"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewModel="clr-namespace:DiplomaProject.MVVM.ViewModel"
+        xmlns:view="clr-namespace:DiplomaProject.MVVM.View"
+        xmlns:local="clr-namespace:DiplomaProject"
+        mc:Ignorable="d"
+        Title="TheoryReader" Height="450" Width="800"
+        WindowState="Maximized"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        Background="#3b3b3b"
+        BorderThickness="0"
+        BorderBrush="Transparent"
+        x:Name="TheoryWindow" 
+        ResizeMode="NoResize">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="40" />
+        </Grid.RowDefinitions>
+        <RichTextBox x:Name="Content"
+                     Margin="100,5,100,5"
+                     Background="White"
+                     Foreground="Black" TextChanged="Content_TextChanged"
+                     >
+            
+        </RichTextBox>
+        <Button x:Name="ReaderCloseBtn"
+                Content="Выйти"
+                Style="{StaticResource MaterialDesignToolForegroundButton}"
+                Foreground="White"
+                FontSize="12"
+                FontFamily="/Fonts/Rubik-Regular.ttf #Rubik"
+                Grid.Row="1"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Right"
+                Margin="0,0,5,0" Click="ReaderCloseBtn_Click"/>
+    </Grid>
+    
+</Window>
