@@ -1,0 +1,115 @@
+﻿<UserControl x:Class="DiplomaProject.MVVM.View.ChooseTestView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DiplomaProject.MVVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="564" 
+             d:DesignWidth="825"
+             Background="Transparent"
+             x:Name="ChooseTestPage"
+             BorderBrush="Transparent"
+             BorderThickness="0">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="230"/>
+            <RowDefinition Height="250"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        
+        <!--Прогрессбар-->
+        <ProgressBar Grid.Row="0"
+                     x:Name="TimerProgBar"
+                     Style="{StaticResource MaterialDesignLinearProgressBar}"
+                     FlowDirection="RightToLeft">
+
+        </ProgressBar>
+
+        <!--Лэйблы с отображением номера вопроса и оставшегося времени на вопрос-->
+        <Label x:Name="QuestionNumberLbl"
+               Grid.Row="1"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Center"
+               DataContext="1" 
+               Margin="10,0,0,0"
+               Foreground="White"
+               FontSize="14"
+               FontFamily="Rubik"/>
+        <Label x:Name="TimeLeftLbl"
+               Grid.Row="1"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Center"
+               DataContext="2"
+               Margin="0,0,10,0"
+               Foreground="White"
+               FontSize="14"
+               FontFamily="Rubik"/>
+
+        <!--Поле отображения вопроса теста-->
+        <TextBlock x:Name="QuestionText"
+                   Grid.Row="2"
+                   HorizontalAlignment="Stretch"
+                   VerticalAlignment="Center"
+                   FontSize="20"
+                   FontFamily="Rubik"
+                   Foreground="White"
+                   Margin="10,0,10,0"/>
+        
+        <!--Элементы управления тестом-->
+        <Button x:Name="CheckBtn"
+                Grid.Row="4"
+                VerticalAlignment="Center"
+                Height="34"
+                Width="100"
+                Content="Отетить"
+                HorizontalAlignment="Left"
+                Margin="100,0,0,0"
+                Background="#1CCD00"
+                BorderThickness="0"/>
+
+        <Button x:Name="NextBtn"
+                Grid.Row="4"
+                VerticalAlignment="Center"
+                Height="34"
+                Width="175"
+                Content="Следующий вопорс"
+                HorizontalAlignment="Center"/>
+
+        <Button x:Name="ExitTestBtn"
+                Grid.Row="4"
+                VerticalAlignment="Center"
+                Height="34"
+                Width="100"
+                Content="Выйти"
+                HorizontalAlignment="Right"
+                Margin="0,0,100,0"
+                Background="DarkRed"
+                BorderThickness="0"/>
+        
+        <!--Панели с типами ответов-->
+        <StackPanel x:Name="RdbStack"
+                    Grid.Row="3"
+                    Margin="10"
+                    VerticalAlignment="Center">
+            <RadioButton x:Name="rdb_1"
+                         Style="{StaticResource TestRadioButtonStyle}"
+                         HorizontalAlignment="Left"/>
+            <RadioButton x:Name="rdb_2"
+                         Style="{StaticResource TestRadioButtonStyle}"
+                         HorizontalAlignment="Left"/>
+            <RadioButton x:Name="rdb_3"
+                         Style="{StaticResource TestRadioButtonStyle}"
+                         HorizontalAlignment="Left"/>
+            <RadioButton x:Name="rdb_4"
+                         Style="{StaticResource TestRadioButtonStyle}"
+                         HorizontalAlignment="Left"/>
+            
+        </StackPanel>
+
+
+    </Grid>
+</UserControl>

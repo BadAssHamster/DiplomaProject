@@ -15,6 +15,7 @@
                 <ResourceDictionary Source="Styles/TheoryMenuStyle.xaml" />
                 <ResourceDictionary Source="Styles/MenuButtonsStyle.xaml" />
                 <ResourceDictionary Source="Styles/MainWindowFontStyle.xaml" />
+                <ResourceDictionary Source="Styles/RdbTestStyle.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
