@@ -13,7 +13,6 @@ namespace DiplomaProject.MVVM.ViewModel
         public RelayCommand ChooseTestCommand { get; set; }
         public TheoryViewModel TheoryPageVM { get; set; }
         public HelloViewModel HelloVM { get; set; }
-
         public ChooseTestViewModel ChooseTestVM { get; set; }
 
         private object _currentView;
