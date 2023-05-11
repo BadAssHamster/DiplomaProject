@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace DiplomaProject.MVVM.ViewModel
 {
@@ -11,7 +12,7 @@ namespace DiplomaProject.MVVM.ViewModel
     {
         public RelayCommand TheoryViewCommand { get; set; }
         public RelayCommand ChooseTestCommand { get; set; }
-        public RelayCommand EcpTestCommand { get; set; }
+        public ICommand EcpTestCommand { get; set; }
         public TheoryViewModel TheoryPageVM { get; set; }
         public HelloViewModel HelloVM { get; set; }
         public ChooseTestViewModel ChooseTestVM { get; set; }
@@ -51,6 +52,8 @@ namespace DiplomaProject.MVVM.ViewModel
             {
                 CurrentView = EcpTestVM;
             });
+            
         }
+
     }
 }
