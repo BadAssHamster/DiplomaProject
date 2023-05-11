@@ -91,22 +91,60 @@
         
         <!--Панели с типами ответов-->
         <StackPanel x:Name="RdbStack"
-                    Grid.Row="3"
+                    Grid.Row="5"
                     Margin="10"
                     VerticalAlignment="Center">
             <RadioButton x:Name="rdb_1"
                          Style="{StaticResource TestRadioButtonStyle}"
-                         HorizontalAlignment="Left"/>
+                         HorizontalAlignment="Left"
+                         Margin="0,5,0,5"/>
             <RadioButton x:Name="rdb_2"
                          Style="{StaticResource TestRadioButtonStyle}"
-                         HorizontalAlignment="Left"/>
+                         HorizontalAlignment="Left"
+                         Margin="0,5,0,5"/>
             <RadioButton x:Name="rdb_3"
                          Style="{StaticResource TestRadioButtonStyle}"
-                         HorizontalAlignment="Left"/>
+                         HorizontalAlignment="Left"
+                         Margin="0,5,0,5"/>
             <RadioButton x:Name="rdb_4"
                          Style="{StaticResource TestRadioButtonStyle}"
-                         HorizontalAlignment="Left"/>
+                         HorizontalAlignment="Left"
+                         Margin="0,5,0,5"/>
             
+        </StackPanel>
+
+        <StackPanel x:Name="CheckStack"
+                    Grid.Row="5"
+                    Margin="10"
+                    VerticalAlignment="Center">
+            <CheckBox x:Name="check_1"
+                         Style="{StaticResource TestCheckBoxStyle}"
+                         HorizontalAlignment="Left"
+                         Margin="0,5,0,5"/>
+            <CheckBox x:Name="check_2"
+                         Style="{StaticResource TestCheckBoxStyle}"
+                         HorizontalAlignment="Left"
+                         Margin="0,5,0,5"/>
+            <CheckBox x:Name="check_3"
+                         Style="{StaticResource TestCheckBoxStyle}"
+                         HorizontalAlignment="Left"
+                         Margin="0,5,0,5"/>
+            <CheckBox x:Name="check_4"
+                         Style="{StaticResource TestCheckBoxStyle}"
+                         HorizontalAlignment="Left"
+                         Margin="0,5,0,5"/>
+
+        </StackPanel>
+        <StackPanel x:Name="TextStack"
+                    Grid.Row="3"
+                    Margin="10"
+                    VerticalAlignment="Center">
+            <TextBox x:Name="AnsweTextBox"
+                     Background="White"
+                     Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                     FontFamily="Rubik"
+                     FontSize="18"
+                     TextAlignment="Justify"/>
         </StackPanel>
 
 
