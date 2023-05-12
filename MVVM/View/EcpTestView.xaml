@@ -79,12 +79,12 @@
 
         <Button x:Name="ExitTestBtn"
                 Grid.Row="4"
-                VerticalAlignment="Top"
+                VerticalAlignment="Center"
                 Height="34"
                 Width="100"
                 Content="Выйти"
                 HorizontalAlignment="Right"
-                Margin="0,105,-2795,0"
+                Margin="0,0,100,0"
                 Background="DarkRed"
                 BorderThickness="0" Click="ExitTestBtn_Click"/>
 
