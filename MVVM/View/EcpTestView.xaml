@@ -55,7 +55,8 @@
                    FontSize="20"
                    FontFamily="Rubik"
                    Foreground="White"
-                   Margin="10,0,10,0"/>
+                   Margin="10,0,10,0"
+                   TextWrapping="Wrap"/>
 
         <!--Элементы управления тестом-->
         <Button x:Name="CheckBtn"
@@ -95,21 +96,33 @@
                     VerticalAlignment="Center"
                     Visibility="Collapsed">
             <RadioButton x:Name="rdb_1"
-                         Style="{StaticResource TestRadioButtonStyle}"
                          HorizontalAlignment="Left"
-                         Margin="0,5,0,5"/>
+                         Margin="0,5,0,5"
+                         Content=""
+                         FontSize="18"
+                         FontFamily="Rubik"
+                         Foreground="White"/>
             <RadioButton x:Name="rdb_2"
-                         Style="{StaticResource TestRadioButtonStyle}"
                          HorizontalAlignment="Left"
-                         Margin="0,5,0,5"/>
+                         Margin="0,5,0,5"
+                         Content=""
+                         FontSize="18"
+                         FontFamily="Rubik"
+                         Foreground="White"/>
             <RadioButton x:Name="rdb_3"
-                         Style="{StaticResource TestRadioButtonStyle}"
                          HorizontalAlignment="Left"
-                         Margin="0,5,0,5"/>
+                         Margin="0,5,0,5"
+                         Content=""
+                         FontSize="18"
+                         FontFamily="Rubik"
+                         Foreground="White"/>
             <RadioButton x:Name="rdb_4"
-                         Style="{StaticResource TestRadioButtonStyle}"
                          HorizontalAlignment="Left"
-                         Margin="0,5,0,5"/>
+                         Margin="0,5,0,5"
+                         Content=""
+                         FontSize="18"
+                         FontFamily="Rubik"
+                         Foreground="White"/>
 
         </StackPanel>
 
@@ -119,21 +132,33 @@
                     VerticalAlignment="Center"
                     Visibility="Collapsed">
             <CheckBox x:Name="check_1"
-                         Style="{StaticResource TestCheckBoxStyle}"
-                         HorizontalAlignment="Left"
-                         Margin="0,5,0,5"/>
+                      HorizontalAlignment="Left"
+                      Margin="0,5,0,5"
+                      FontSize="18"
+                      FontFamily="Rubik"
+                      Foreground="White"
+                      Style="{StaticResource MaterialDesignUserForegroundCheckBox}"/>
             <CheckBox x:Name="check_2"
-                         Style="{StaticResource TestCheckBoxStyle}"
-                         HorizontalAlignment="Left"
-                         Margin="0,5,0,5"/>
+                      HorizontalAlignment="Left"
+                      Margin="0,5,0,5"
+                      FontSize="18"
+                      FontFamily="Rubik"
+                      Foreground="White"
+                      Style="{StaticResource MaterialDesignUserForegroundCheckBox}"/>
             <CheckBox x:Name="check_3"
-                         Style="{StaticResource TestCheckBoxStyle}"
-                         HorizontalAlignment="Left"
-                         Margin="0,5,0,5"/>
+                      HorizontalAlignment="Left"
+                      Margin="0,5,0,5"
+                      FontSize="18"
+                      FontFamily="Rubik"
+                      Foreground="White"
+                      Style="{StaticResource MaterialDesignUserForegroundCheckBox}"/>
             <CheckBox x:Name="check_4"
-                         Style="{StaticResource TestCheckBoxStyle}"
-                         HorizontalAlignment="Left"
-                         Margin="0,5,0,5"/>
+                      HorizontalAlignment="Left"
+                      Margin="0,5,0,5"
+                      FontSize="18"
+                      FontFamily="Rubik"
+                      Foreground="White"
+                      Style="{StaticResource MaterialDesignUserForegroundCheckBox}"/>
 
         </StackPanel>
         <StackPanel x:Name="TextStack"
