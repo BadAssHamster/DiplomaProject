@@ -164,5 +164,14 @@ namespace DiplomaProject.MVVM.View
         {
 
         }
+
+        private void NextBtn_Click(object sender, RoutedEventArgs e)
+        {
+            NextQuestion();
+            if (questionCounter == 9)
+            {
+                NextBtn.Visibility = Visibility.Collapsed;
+            }
+        }
     }
 }

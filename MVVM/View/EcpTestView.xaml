@@ -76,7 +76,7 @@
                 Height="34"
                 Width="175"
                 Content="Следующий вопорс"
-                HorizontalAlignment="Center"/>
+                HorizontalAlignment="Center" Click="NextBtn_Click"/>
 
         <Button x:Name="ExitTestBtn"
                 Grid.Row="4"
