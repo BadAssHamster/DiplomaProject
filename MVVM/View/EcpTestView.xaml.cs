@@ -20,6 +20,7 @@ namespace DiplomaProject.MVVM.View
     public partial class EcpTestView : UserControl
     {
         public int TestIndex = 1;
+        public int questionCounter = 0;
         public List<(string question, int questionId, int questionType)> Questions = new List<(string questionList, int questionId, int questionType)>();
         public List<(string answer, int checkAnswer)> Answers = new List<(string answer, int checkAnswer)>();
 
@@ -87,6 +88,8 @@ namespace DiplomaProject.MVVM.View
         }
         public void NextQuestion()
         {
+            var question = Questions[questionCounter];
+            QuestionText.Text = question.question.ToString();
             
 
         }
@@ -94,6 +97,7 @@ namespace DiplomaProject.MVVM.View
         {
             InitializeComponent();
             GetQuestions(Questions, TestIndex);
+            NextQuestion();
 
         }
                
