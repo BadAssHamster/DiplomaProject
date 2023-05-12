@@ -17,7 +17,6 @@
             <RowDefinition Height="230"/>
             <RowDefinition Height="250"/>
             <RowDefinition Height="40"/>
-            <RowDefinition/>
         </Grid.RowDefinitions>
 
         <!--Прогрессбар-->
@@ -79,7 +78,7 @@
                 HorizontalAlignment="Center"/>
 
         <Button x:Name="ExitTestBtn"
-                Grid.Row="5"
+                Grid.Row="4"
                 VerticalAlignment="Top"
                 Height="34"
                 Width="100"
@@ -91,9 +90,10 @@
 
         <!--Панели с типами ответов-->
         <StackPanel x:Name="RdbStack"
-                    Grid.Row="5"
+                    Grid.Row="3"
                     Margin="10"
-                    VerticalAlignment="Center">
+                    VerticalAlignment="Center"
+                    Visibility="Collapsed">
             <RadioButton x:Name="rdb_1"
                          Style="{StaticResource TestRadioButtonStyle}"
                          HorizontalAlignment="Left"
@@ -114,9 +114,10 @@
         </StackPanel>
 
         <StackPanel x:Name="CheckStack"
-                    Grid.Row="5"
+                    Grid.Row="3"
                     Margin="10"
-                    VerticalAlignment="Center">
+                    VerticalAlignment="Center"
+                    Visibility="Collapsed">
             <CheckBox x:Name="check_1"
                          Style="{StaticResource TestCheckBoxStyle}"
                          HorizontalAlignment="Left"
@@ -138,8 +139,9 @@
         <StackPanel x:Name="TextStack"
                     Grid.Row="3"
                     Margin="10"
-                    VerticalAlignment="Center">
-            <TextBox x:Name="AnsweTextBox"
+                    VerticalAlignment="Center"
+                    Visibility="Collapsed">
+            <TextBox x:Name="AnswerTextBox"
                      Background="White"
                      Style="{StaticResource MaterialDesignOutlinedTextBox}"
                      FontFamily="Rubik"
