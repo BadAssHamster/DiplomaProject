@@ -264,15 +264,17 @@ namespace DiplomaProject.MVVM.View
                
         private void ExitTestBtn_Click(object sender, RoutedEventArgs e)
         {
+            CommandBinding com = ExitTestBtn.Command;
+
             MessageBoxResult result = MessageBox.Show("Если сейчас Вы закроете тест, Ваш результ не будет сохранен. Вы уверенны?", "Внимание!", MessageBoxButton.YesNo);
             if (result == MessageBoxResult.Yes)
             {
-                var myMainModel = new MainViewModel();
-                myMainModel.ChooseTestCommand.Execute(0);
+                ExitTestBtn.Command = com;
+                ExitTestBtn.Command.Execute(null);
             }
-            else if (result == MessageBoxResult.No)
+            else
             {
-                
+                ExitTestBtn.Command = null;
             }
         }
 

@@ -1,4 +1,5 @@
 ﻿using DiplomaProject.Core;
+using Org.BouncyCastle.Security;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,6 +31,7 @@ namespace DiplomaProject.MVVM.ViewModel
             }
         }
 
+
         public MainViewModel()
         { 
             TheoryPageVM = new TheoryViewModel();
@@ -52,6 +54,8 @@ namespace DiplomaProject.MVVM.ViewModel
             {
                 CurrentView = EcpTestVM;
             });
+
+             
             
         }
 
