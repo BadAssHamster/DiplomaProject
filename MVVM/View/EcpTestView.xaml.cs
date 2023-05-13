@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MaterialDesignColors.Recommended;
 using MySql.Data.MySqlClient;
 
 namespace DiplomaProject.MVVM.View
@@ -21,6 +22,8 @@ namespace DiplomaProject.MVVM.View
     {
         public int TestIndex = 1;
         public int questionCounter = -1;
+        public int EcpScore = 0;
+        Color rdb_color = Color.FromRgb(179, 157, 219);
         public List<(string question, int questionId, int questionType)> Questions = new List<(string questionList, int questionId, int questionType)>();
         public List<(string answer, int checkAnswer)> Answers = new List<(string answer, int checkAnswer)>();
 
@@ -89,6 +92,7 @@ namespace DiplomaProject.MVVM.View
         }
         public void NextQuestion()
         {
+            CheckBtn.IsEnabled = true;
             questionCounter++;
             var question = Questions[questionCounter];
             QuestionText.Text = question.question.ToString();
@@ -112,7 +116,7 @@ namespace DiplomaProject.MVVM.View
             }
 
             GetAnswers(Answers, question.questionId);
-            
+
             if (question.questionType != 3)
             {
                 for (int answerNumber = 0; answerNumber < 4; answerNumber++)
@@ -124,19 +128,23 @@ namespace DiplomaProject.MVVM.View
                             var find_rdb = RdbStack.FindName($"rdb_{answerNumber + 1}") as RadioButton;
                             if (find_rdb != null)
                             {
+                                find_rdb.Background = SystemColors.ControlBrush;
                                 find_rdb.IsChecked = false;
+                                find_rdb.IsEnabled = true;
                                 find_rdb.Content = answer.answer;
                                 find_rdb.Tag = answer.checkAnswer;
-                            }                            
+                            }
                             break;
                         case 2:
                             var find_check = CheckStack.FindName($"check_{answerNumber + 1}") as CheckBox;
-                            if(find_check != null)
+                            if (find_check != null)
                             {
+                                find_check.Background = SystemColors.ControlBrush;
                                 find_check.IsChecked = false;
+                                find_check.IsEnabled = true;
                                 find_check.Content = answer.answer;
                                 find_check.Tag = answer.checkAnswer;
-                            }                            
+                            }
                             break;
                     }
                 }
@@ -149,6 +157,86 @@ namespace DiplomaProject.MVVM.View
                 {
                     find_txtbox.Text = "";
                     find_txtbox.Tag = answer.checkAnswer;
+                }
+            }
+        }
+        public void CheckAnswer()
+        {
+            var question = Questions[questionCounter];
+            if (question.questionType != 3)
+            {
+                int chb_right_answers_counter = 0;
+                int chb_case_counter = 0;
+                for (int answerNumber = 0; answerNumber < 4; answerNumber++)
+                {
+                    var answer = Answers[answerNumber];
+                    string textAnswer = answer.answer.ToString();
+                    int answerCheck = answer.checkAnswer;
+                    chb_right_answers_counter += answerCheck;
+
+                    switch (question.questionType)
+                    {
+                        case 1:
+                            var find_rdb = RdbStack.FindName($"rdb_{answerNumber + 1}") as RadioButton;
+                            if (find_rdb != null && find_rdb.IsChecked == true)
+                            {
+                                if (find_rdb.Tag.Equals(1))
+                                {
+                                    EcpScore++;
+                                    find_rdb.Background = Brushes.YellowGreen;
+                                }
+                                else
+                                {
+                                    find_rdb.Background = Brushes.DarkRed;
+                                }
+                                CheckBtn.IsEnabled = false;
+                            }
+                            else
+                            {
+                                CheckBtn.IsEnabled = false;
+                                find_rdb.IsEnabled = false;
+                            }
+                            break;
+                        case 2:
+                            var find_check = CheckStack.FindName($"check_{answerNumber + 1}") as CheckBox;
+                            if (find_check != null && find_check.IsChecked == true)
+                            {
+                                if (find_check.Tag.Equals(1))
+                                {
+                                    chb_case_counter++;
+                                    find_check.Foreground = Brushes.Green;
+                                }
+                                else
+                                {
+                                    find_check.Foreground = Brushes.Red;
+                                }
+
+                            }
+                            else
+                            {
+                                find_check.IsEnabled = false;
+                            }
+                            if (answerNumber == 3 && chb_case_counter == chb_right_answers_counter)
+                            {
+                                EcpScore++;
+                            }
+                            CheckBtn.IsEnabled = false;
+                            break;
+                    }
+                }
+            }
+            else
+            {
+                var answer = Answers[0];
+                var find_txtbox = TextStack.FindName($"AnswerTextBox") as TextBox;
+                if (find_txtbox != null)
+                {
+                    if (find_txtbox.Text == answer.answer)
+                    {
+                        EcpScore++;
+                        find_txtbox.BorderBrush = Brushes.LightGreen;
+                        CheckBtn.IsEnabled = false;
+                    }
                 }
             }
         }
@@ -172,6 +260,11 @@ namespace DiplomaProject.MVVM.View
             {
                 NextBtn.Visibility = Visibility.Collapsed;
             }
+        }
+
+        private void CheckBtn_Click(object sender, RoutedEventArgs e)
+        {
+            CheckAnswer();
         }
     }
 }

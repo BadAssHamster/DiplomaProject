@@ -56,7 +56,10 @@
                    FontSize="20"
                    FontFamily="Rubik"
                    Foreground="White"
-                   Margin="10,0,10,0"/>
+                   Margin="10,0,10,0"
+                   TextWrapping="Wrap"
+                   Width="805"
+                   TextAlignment="Justify"/>
         
         <!--Элементы управления тестом-->
         <Button x:Name="CheckBtn"
@@ -68,7 +71,7 @@
                 HorizontalAlignment="Left"
                 Margin="100,0,0,0"
                 Background="#1CCD00"
-                BorderThickness="0"/>
+                BorderThickness="0" Click="CheckBtn_Click"/>
 
         <Button x:Name="NextBtn"
                 Grid.Row="4"
@@ -76,7 +79,8 @@
                 Height="34"
                 Width="175"
                 Content="Следующий вопорс"
-                HorizontalAlignment="Center"/>
+                HorizontalAlignment="Center" 
+                Click="NextBtn_Click"/>
 
         <Button x:Name="ExitTestBtn"
                 Grid.Row="4"
@@ -91,52 +95,76 @@
         
         <!--Панели с типами ответов-->
         <StackPanel x:Name="RdbStack"
-                    Grid.Row="5"
+                    Grid.Row="3"
                     Margin="10"
                     VerticalAlignment="Center">
             <RadioButton x:Name="rdb_1"
-                         Style="{StaticResource TestRadioButtonStyle}"
+                         Style="{StaticResource MaterialDesignLightRadioButton}"
                          HorizontalAlignment="Left"
-                         Margin="0,5,0,5"/>
+                         Margin="0,5,0,5"
+                         Foreground="White"
+                         FontSize="18"
+                         FontFamily="Rubik"/>
             <RadioButton x:Name="rdb_2"
-                         Style="{StaticResource TestRadioButtonStyle}"
+                         Style="{StaticResource MaterialDesignLightRadioButton}"
                          HorizontalAlignment="Left"
-                         Margin="0,5,0,5"/>
+                         Margin="0,5,0,5"
+                         Foreground="White"
+                         FontSize="18"
+                         FontFamily="Rubik"/>
             <RadioButton x:Name="rdb_3"
-                         Style="{StaticResource TestRadioButtonStyle}"
+                         Style="{StaticResource MaterialDesignLightRadioButton}"
                          HorizontalAlignment="Left"
-                         Margin="0,5,0,5"/>
+                         Margin="0,5,0,5"
+                         Foreground="White"
+                         FontSize="18"
+                         FontFamily="Rubik"/>
             <RadioButton x:Name="rdb_4"
-                         Style="{StaticResource TestRadioButtonStyle}"
+                         Style="{StaticResource MaterialDesignLightRadioButton}"
                          HorizontalAlignment="Left"
-                         Margin="0,5,0,5"/>
+                         Margin="0,5,0,5"
+                         Foreground="White"
+                         FontSize="18"
+                         FontFamily="Rubik"/>
             
         </StackPanel>
 
         <StackPanel x:Name="CheckStack"
-                    Grid.Row="5"
+                    Grid.Row="3"
                     Margin="10"
                     VerticalAlignment="Center">
             <CheckBox x:Name="check_1"
-                         Style="{StaticResource TestCheckBoxStyle}"
+                         Style="{StaticResource MaterialDesignUserForegroundCheckBox}"
                          HorizontalAlignment="Left"
-                         Margin="0,5,0,5"/>
+                         Margin="0,5,0,5"
+                         Foreground="White"
+                         FontSize="18"
+                         FontFamily="Rubik"/>
             <CheckBox x:Name="check_2"
-                         Style="{StaticResource TestCheckBoxStyle}"
+                         Style="{StaticResource MaterialDesignUserForegroundCheckBox}"
                          HorizontalAlignment="Left"
-                         Margin="0,5,0,5"/>
+                         Margin="0,5,0,5"
+                        Foreground="White"
+                         FontSize="18"
+                         FontFamily="Rubik"/>
             <CheckBox x:Name="check_3"
-                         Style="{StaticResource TestCheckBoxStyle}"
+                         Style="{StaticResource MaterialDesignUserForegroundCheckBox}"
                          HorizontalAlignment="Left"
-                         Margin="0,5,0,5"/>
+                         Margin="0,5,0,5"
+                         Foreground="White"
+                         FontSize="18"
+                         FontFamily="Rubik"/>
             <CheckBox x:Name="check_4"
-                         Style="{StaticResource TestCheckBoxStyle}"
+                         Style="{StaticResource MaterialDesignUserForegroundCheckBox}"
                          HorizontalAlignment="Left"
-                         Margin="0,5,0,5"/>
+                         Margin="0,5,0,5"
+                         Foreground="White"
+                         FontSize="18"
+                         FontFamily="Rubik"/>
 
         </StackPanel>
         <StackPanel x:Name="TextStack"
-                    Grid.Row="5"
+                    Grid.Row="3"
                     Margin="10"
                     VerticalAlignment="Center">
             <TextBox x:Name="AnsweTextBox"
