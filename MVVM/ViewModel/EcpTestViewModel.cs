@@ -7,6 +7,6 @@ using System.Threading.Tasks;
 namespace DiplomaProject.MVVM.ViewModel
 {
     internal class EcpTestViewModel
-    {
+    {        
     }
 }

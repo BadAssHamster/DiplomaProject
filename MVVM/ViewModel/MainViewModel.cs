@@ -11,7 +11,7 @@ namespace DiplomaProject.MVVM.ViewModel
     class MainViewModel : ObservableObject
     {
         public RelayCommand TheoryViewCommand { get; set; }
-        public RelayCommand ChooseTestCommand { get; set; }
+        public ICommand ChooseTestCommand { get; set; }
         public ICommand EcpTestCommand { get; set; }
         public TheoryViewModel TheoryPageVM { get; set; }
         public HelloViewModel HelloVM { get; set; }

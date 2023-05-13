@@ -12,7 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DiplomaProject.MVVM.ViewModel;
 using MaterialDesignColors.Recommended;
+using Microsoft.Xaml.Behaviors.Core;
 using MySql.Data.MySqlClient;
 
 namespace DiplomaProject.MVVM.View
@@ -23,7 +25,7 @@ namespace DiplomaProject.MVVM.View
         public int TestIndex = 1;
         public int questionCounter = -1;
         public int EcpScore = 0;
-        Color rdb_color = Color.FromRgb(179, 157, 219);
+        public bool answerChecked = false;
         public List<(string question, int questionId, int questionType)> Questions = new List<(string questionList, int questionId, int questionType)>();
         public List<(string answer, int checkAnswer)> Answers = new List<(string answer, int checkAnswer)>();
 
@@ -90,6 +92,7 @@ namespace DiplomaProject.MVVM.View
 
             return answers;
         }
+        
         public void NextQuestion()
         {
             CheckBtn.IsEnabled = true;
@@ -139,7 +142,7 @@ namespace DiplomaProject.MVVM.View
                             var find_check = CheckStack.FindName($"check_{answerNumber + 1}") as CheckBox;
                             if (find_check != null)
                             {
-                                find_check.Background = SystemColors.ControlBrush;
+                                find_check.Foreground = SystemColors.ControlBrush;
                                 find_check.IsChecked = false;
                                 find_check.IsEnabled = true;
                                 find_check.Content = answer.answer;
@@ -155,11 +158,14 @@ namespace DiplomaProject.MVVM.View
                 var find_txtbox = TextStack.FindName($"AnswerTextBox") as TextBox;
                 if (find_txtbox != null)
                 {
+                    find_txtbox.Background = SystemColors.ControlBrush;
+                    find_txtbox.IsEnabled = true;
                     find_txtbox.Text = "";
-                    find_txtbox.Tag = answer.checkAnswer;
+                    find_txtbox.Tag = answer.answer;
                 }
             }
         }
+       
         public void CheckAnswer()
         {
             var question = Questions[questionCounter];
@@ -228,18 +234,26 @@ namespace DiplomaProject.MVVM.View
             else
             {
                 var answer = Answers[0];
-                var find_txtbox = TextStack.FindName($"AnswerTextBox") as TextBox;
+                var find_txtbox = TextStack.FindName("AnswerTextBox") as TextBox;
                 if (find_txtbox != null)
                 {
                     if (find_txtbox.Text == answer.answer)
                     {
                         EcpScore++;
-                        find_txtbox.BorderBrush = Brushes.LightGreen;
+                        find_txtbox.Background = Brushes.LightGreen;
+                        find_txtbox.IsEnabled = false;
+                        CheckBtn.IsEnabled = false;
+                    }
+                    else
+                    {
+                        find_txtbox.Background = Brushes.Red;
+                        find_txtbox.IsEnabled = false;
                         CheckBtn.IsEnabled = false;
                     }
                 }
             }
         }
+        
         public EcpTestView()
         {
             InitializeComponent();
@@ -250,12 +264,29 @@ namespace DiplomaProject.MVVM.View
                
         private void ExitTestBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            MessageBoxResult result = MessageBox.Show("Если сейчас Вы закроете тест, Ваш результ не будет сохранен. Вы уверенны?", "Внимание!", MessageBoxButton.YesNo);
+            if (result == MessageBoxResult.Yes)
+            {
+                var myMainModel = new MainViewModel();
+                myMainModel.ChooseTestCommand.Execute(0);
+            }
+            else if (result == MessageBoxResult.No)
+            {
+                
+            }
         }
 
         private void NextBtn_Click(object sender, RoutedEventArgs e)
         {
-            NextQuestion();
+            if (answerChecked == false)
+            {
+                MessageBox.Show("Вы не ответили на вопрос!");
+            }
+            else 
+            {
+                answerChecked = false;
+                NextQuestion();
+            }
             if (questionCounter == 9)
             {
                 NextBtn.Visibility = Visibility.Collapsed;
@@ -265,6 +296,7 @@ namespace DiplomaProject.MVVM.View
         private void CheckBtn_Click(object sender, RoutedEventArgs e)
         {
             CheckAnswer();
+            answerChecked = true;
         }
     }
 }

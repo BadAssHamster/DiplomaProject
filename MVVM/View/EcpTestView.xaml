@@ -91,7 +91,7 @@
                 HorizontalAlignment="Right"
                 Margin="0,0,100,0"
                 Background="DarkRed"
-                BorderThickness="0"/>
+                BorderThickness="0" Click="ExitTestBtn_Click"/>
         
         <!--Панели с типами ответов-->
         <StackPanel x:Name="RdbStack"
@@ -167,7 +167,7 @@
                     Grid.Row="3"
                     Margin="10"
                     VerticalAlignment="Center">
-            <TextBox x:Name="AnsweTextBox"
+            <TextBox x:Name="AnswerTextBox"
                      Background="White"
                      Style="{StaticResource MaterialDesignOutlinedTextBox}"
                      FontFamily="Rubik"
