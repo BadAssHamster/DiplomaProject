@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 using DiplomaProject.MVVM.ViewModel;
 using MaterialDesignColors.Recommended;
 using Microsoft.Xaml.Behaviors.Core;
@@ -25,10 +26,30 @@ namespace DiplomaProject.MVVM.View
         public int TestIndex = 1;
         public int questionCounter = -1;
         public int EcpScore = 0;
+        public int secondsLeft = 0;
         public bool answerChecked = false;
         public List<(string question, int questionId, int questionType)> Questions = new List<(string questionList, int questionId, int questionType)>();
         public List<(string answer, int checkAnswer)> Answers = new List<(string answer, int checkAnswer)>();
+        DispatcherTimer timer = new DispatcherTimer();
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            TimerProgBar.Value++;
+            secondsLeft--;
+            TimeLeftLbl.Content = $"Секунд осталось: {secondsLeft}";
 
+            if (TimerProgBar.Value >= TimerProgBar.Maximum)
+            {
+                timer.Stop();
+                CheckAnswer();
+                answerChecked = true;
+            }
+        }
+        private void ResetTimer()
+        {
+            // установите значение ProgressBar и значение таймера в начальное состояние
+            TimerProgBar.Value = 0;
+            timer.Stop();
+        }
         public List<(string question, int questionId, int questionType)> GetQuestions(List<(string question, int questionId, int questionType)> questionList, int surveyIndex)
         {
 
@@ -95,8 +116,10 @@ namespace DiplomaProject.MVVM.View
         
         public void NextQuestion()
         {
+            ResetTimer();
             CheckBtn.IsEnabled = true;
             questionCounter++;
+            QuestionNumberLbl.Content = $"Вопрос: {questionCounter + 1} / 10";
             var question = Questions[questionCounter];
             QuestionText.Text = question.question.ToString();
             switch (question.questionType)
@@ -105,16 +128,28 @@ namespace DiplomaProject.MVVM.View
                     RdbStack.Visibility = Visibility.Visible;
                     CheckStack.Visibility = Visibility.Collapsed;
                     TextStack.Visibility = Visibility.Collapsed;
+                    TimerProgBar.Maximum = 30;
+                    secondsLeft = 30;
+                    TimeLeftLbl.Content = $"Секунд осталось: {secondsLeft}";
+                    timer.Start();
                     break;
                 case 2:
                     RdbStack.Visibility = Visibility.Collapsed;
                     CheckStack.Visibility = Visibility.Visible;
                     TextStack.Visibility = Visibility.Collapsed;
+                    TimerProgBar.Maximum = 60;
+                    secondsLeft = 60;
+                    TimeLeftLbl.Content = $"Секунд осталось: {secondsLeft}";
+                    timer.Start();
                     break;
                 case 3:
                     RdbStack.Visibility = Visibility.Collapsed;
                     CheckStack.Visibility = Visibility.Collapsed;
                     TextStack.Visibility = Visibility.Visible;
+                    TimerProgBar.Maximum = 90;
+                    secondsLeft = 90;
+                    TimeLeftLbl.Content = $"Секунд осталось: {secondsLeft}";
+                    timer.Start();
                     break;
             }
 
@@ -165,7 +200,12 @@ namespace DiplomaProject.MVVM.View
                 }
             }
         }
-       
+
+        private void Timer_Tick1(object? sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
         public void CheckAnswer()
         {
             var question = Questions[questionCounter];
@@ -237,7 +277,7 @@ namespace DiplomaProject.MVVM.View
                 var find_txtbox = TextStack.FindName("AnswerTextBox") as TextBox;
                 if (find_txtbox != null)
                 {
-                    if (find_txtbox.Text == answer.answer)
+                    if (find_txtbox.Text.ToLower() == answer.answer.ToLower())
                     {
                         EcpScore++;
                         find_txtbox.Background = Brushes.LightGreen;
@@ -259,22 +299,21 @@ namespace DiplomaProject.MVVM.View
             InitializeComponent();
             GetQuestions(Questions, TestIndex);
             NextQuestion();
+            timer.Interval = new TimeSpan(0, 0, 1);
+            timer.Tick += new EventHandler(Timer_Tick);
 
         }
                
         private void ExitTestBtn_Click(object sender, RoutedEventArgs e)
         {
-            CommandBinding com = ExitTestBtn.Command;
-
             MessageBoxResult result = MessageBox.Show("Если сейчас Вы закроете тест, Ваш результ не будет сохранен. Вы уверенны?", "Внимание!", MessageBoxButton.YesNo);
             if (result == MessageBoxResult.Yes)
             {
-                ExitTestBtn.Command = com;
-                ExitTestBtn.Command.Execute(null);
+                EndTestBtn.Command.Execute(null);
             }
             else
             {
-                ExitTestBtn.Command = null;
+                
             }
         }
 
@@ -299,6 +338,38 @@ namespace DiplomaProject.MVVM.View
         {
             CheckAnswer();
             answerChecked = true;
+            timer.Stop();
+            if (questionCounter == 9)
+            {
+                CheckBtn.Visibility = Visibility.Collapsed;
+                ExitTestBtn.Visibility = Visibility.Collapsed;
+                EndTestBtn.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void EndTestBtn_Click(object sender, RoutedEventArgs e)
+        {
+            int testMark = 0;
+
+            if(EcpScore <= 4)
+            {
+                testMark = 2;
+            }
+            else if(EcpScore > 4 && EcpScore < 7)
+            { 
+                testMark = 3;
+            }
+            else if(EcpScore > 6 && EcpScore < 9)
+            {
+                testMark = 4;
+            }
+            else
+            {
+                testMark = 5;
+            }
+
+            MessageBox.Show($"Вы ответили на {EcpScore} из 10 вопросов.\nВаша оценка: {testMark}", "Результат");
+
         }
     }
 }

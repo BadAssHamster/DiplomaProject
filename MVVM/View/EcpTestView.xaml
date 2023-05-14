@@ -82,6 +82,19 @@
                 HorizontalAlignment="Center" 
                 Click="NextBtn_Click"/>
 
+        <Button x:Name="EndTestBtn"
+                Grid.Row="4"
+                VerticalAlignment="Center"
+                Height="34"
+                Width="175"
+                Content="Завершить тест"
+                HorizontalAlignment="Center" 
+                Background="#1CCD00"
+                Visibility="Collapsed"
+                Click="EndTestBtn_Click"
+                Command="{Binding DataContext.ChooseTestCommand, 
+            RelativeSource={RelativeSource AncestorType={x:Type Window}}}"/>
+
         <Button x:Name="ExitTestBtn"
                 Grid.Row="4"
                 VerticalAlignment="Center"
