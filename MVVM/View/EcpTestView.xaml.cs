@@ -46,10 +46,10 @@ namespace DiplomaProject.MVVM.View
         }
         private void ResetTimer()
         {
-            // установите значение ProgressBar и значение таймера в начальное состояние
             TimerProgBar.Value = 0;
             timer.Stop();
         }
+        #region Метод выборки 10 рандомных вопросов из базы данных
         public List<(string question, int questionId, int questionType)> GetQuestions(List<(string question, int questionId, int questionType)> questionList, int surveyIndex)
         {
 
@@ -81,7 +81,9 @@ namespace DiplomaProject.MVVM.View
 
             return questionList;
         }
+        #endregion
 
+        #region Метод выборки ответов на текущий вопрос
         public List<(string answer, int checkAnswer)> GetAnswers(List<(string answer, int checkAnswer)> answers, int questionId)
         {
             Answers.Clear();
@@ -113,7 +115,9 @@ namespace DiplomaProject.MVVM.View
 
             return answers;
         }
-        
+        #endregion
+
+        #region Метод открытия слудющего вопроса
         public void NextQuestion()
         {
             ResetTimer();
@@ -200,12 +204,9 @@ namespace DiplomaProject.MVVM.View
                 }
             }
         }
+        #endregion
 
-        private void Timer_Tick1(object? sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
+        #region Метод проверки ответа на вопрос
         public void CheckAnswer()
         {
             var question = Questions[questionCounter];
@@ -293,7 +294,8 @@ namespace DiplomaProject.MVVM.View
                 }
             }
         }
-        
+        #endregion
+
         public EcpTestView()
         {
             InitializeComponent();
@@ -310,10 +312,6 @@ namespace DiplomaProject.MVVM.View
             if (result == MessageBoxResult.Yes)
             {
                 EndTestBtn.Command.Execute(null);
-            }
-            else
-            {
-                
             }
         }
 
