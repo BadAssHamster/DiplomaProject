@@ -221,7 +221,9 @@
                                         Width="230">
 
                                 <Button x:Name="ChallengeBtn" Style="{StaticResource ChallengeBtnStyle}"
-                                             Margin="9,0,0,0" Click="ChallengeBtn_Click"/>
+                                        Margin="9,0,0,0" 
+                                        Command="{Binding ChallengeAccessCommand}"
+                                        Click="ChallengeBtn_Click"/>
 
                                 <TextBlock Text="Испытание"
                                            Margin="25,0,0,0"

@@ -30,7 +30,7 @@ namespace DiplomaProject.MVVM.View
         public bool answerChecked = false;
         public List<(string question, int questionId, int questionType)> Questions = new List<(string questionList, int questionId, int questionType)>();
         public List<(string answer, int checkAnswer)> Answers = new List<(string answer, int checkAnswer)>();
-        DispatcherTimer timer = new DispatcherTimer();
+        DispatcherTimer timer = new DispatcherTimer(); 
         private void Timer_Tick(object sender, EventArgs e)
         {
             TimerProgBar.Value++;

@@ -14,10 +14,12 @@ namespace DiplomaProject.MVVM.ViewModel
         public RelayCommand TheoryViewCommand { get; set; }
         public ICommand ChooseTestCommand { get; set; }
         public ICommand EcpTestCommand { get; set; }
+        public RelayCommand ChallengeAccessCommand { get; set; }
         public TheoryViewModel TheoryPageVM { get; set; }
         public HelloViewModel HelloVM { get; set; }
         public ChooseTestViewModel ChooseTestVM { get; set; }
         public EcpTestViewModel EcpTestVM { get; set; } 
+        public ChallengeAccessViewModel ChallengeAccessVM { get; set; }
 
         private object _currentView;
 
@@ -38,6 +40,7 @@ namespace DiplomaProject.MVVM.ViewModel
             HelloVM = new HelloViewModel();
             ChooseTestVM = new ChooseTestViewModel();
             EcpTestVM = new EcpTestViewModel();
+            ChallengeAccessVM = new ChallengeAccessViewModel();
             CurrentView = HelloVM;
 
             TheoryViewCommand = new RelayCommand(o =>
@@ -53,6 +56,11 @@ namespace DiplomaProject.MVVM.ViewModel
             EcpTestCommand = new RelayCommand(o =>
             {
                 CurrentView = EcpTestVM;
+            });
+
+            ChallengeAccessCommand = new RelayCommand(o =>
+            {
+                CurrentView = ChallengeAccessVM;
             });
 
              
