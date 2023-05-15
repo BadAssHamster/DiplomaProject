@@ -66,7 +66,7 @@ namespace DiplomaProject.MVVM.View
             Mark1Lbl.Foreground = marks.mark1 == 0 && marks.mark1 < 4 ? Brushes.DarkOrange : Brushes.Green;
             Mark2Lbl.Foreground = marks.mark2 == 0 && marks.mark2 < 4 ? Brushes.DarkOrange : Brushes.Green;
             Mark3Lbl.Foreground = marks.mark3 == 0 && marks.mark3 < 4 ? Brushes.DarkOrange : Brushes.Green;
-            StartChallenge.IsEnabled = marks.access == 1 ? true : false;
+            StartChallenge.IsEnabled = marks.mark1 > 3 && marks.mark2 > 3  && marks.mark3 > 3 ? true : false;
 
         }
     }

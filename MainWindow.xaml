@@ -275,7 +275,8 @@
                             Content="Войти"
                             Margin="3,70,3,0" 
                             FontFamily="Fonts/Rubik-regular.ttf #Rubik"
-                            FontSize="10"/>
+                            FontSize="10" Click="LoginBtn_Click"
+                            />
 
 
                 </StackPanel>

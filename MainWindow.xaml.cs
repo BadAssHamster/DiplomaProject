@@ -110,5 +110,11 @@ namespace DiplomaProject
             AboutWindow ShowAbout = new AboutWindow();
             ShowAbout.ShowDialog();
         }
+
+        private void LoginBtn_Click(object sender, RoutedEventArgs e)
+        {
+            AuthorisationWindow authorisationWindow = new AuthorisationWindow(this);
+            authorisationWindow.ShowDialog();
+        }
     }
 }
