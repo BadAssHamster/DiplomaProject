@@ -23,5 +23,10 @@ namespace DiplomaProject
         {
             InitializeComponent();
         }
+
+        private void AuthCloseBtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

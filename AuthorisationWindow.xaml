@@ -23,10 +23,17 @@
         <materialDesign:DialogHost CloseOnClickAway="True" 
                                    x:Name="DialogHost">
             <StackPanel>
+                <Button x:Name="AuthCloseBtn"
+                        HorizontalAlignment="Right"
+                        Width="87"
+                        Margin="0,10,10,0"
+                        Content="Закрыть"
+                        Style="{StaticResource MaterialDesignFlatButton}" Click="AuthCloseBtn_Click"/>
 
-                <Image Margin="0,120,0,5" 
+                <Image Margin="0,100,0,5" 
                        Source="\Assets\login_logo.png" 
-                       Height="100"/>
+                       Height="100"
+                       />
 
                 <TextBlock Margin="0,25,0,5"
                            HorizontalAlignment="Center"

@@ -18,6 +18,7 @@
     <None Remove="Assets\expand_icon.png" />
     <None Remove="Assets\HelloView.png" />
     <None Remove="Assets\linux_icon.png" />
+    <None Remove="Assets\login_logo.png" />
     <None Remove="Assets\mac_icon.png" />
     <None Remove="Assets\plugin_icon.png" />
     <None Remove="Assets\setup_icon.png" />
@@ -48,6 +49,7 @@
     <Resource Include="Assets\expand_icon.png" />
     <Resource Include="Assets\HelloView.png" />
     <Resource Include="Assets\linux_icon.png" />
+    <Resource Include="Assets\login_logo.png" />
     <Resource Include="Assets\mac_icon.png" />
     <Resource Include="Assets\plugin_icon.png" />
     <Resource Include="Assets\setup_icon.png" />
