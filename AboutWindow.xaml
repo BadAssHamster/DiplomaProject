@@ -1,0 +1,75 @@
+﻿<Window x:Class="DiplomaProject.AboutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewModel="clr-namespace:DiplomaProject.MVVM.ViewModel"
+        xmlns:view="clr-namespace:DiplomaProject.MVVM.View"
+        xmlns:local="clr-namespace:DiplomaProject"
+        mc:Ignorable="d"
+        Title="О программе" Height="400" Width="300"
+        x:Name="About"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        AllowsTransparency="True"
+        Background="Transparent">
+
+    <Border CornerRadius="9" Background="White">
+
+        <Border CornerRadius="9" Background="#3b3b3b"
+                Height="398"
+                Width=" 298" MouseDown="Border_MouseDown">
+            <Grid>
+                <TextBlock x:Name="About_Text"
+                       Height="40"
+                       VerticalAlignment="Top"
+                       Margin="0,10,0,0"
+                       Foreground="White"
+                       FontFamily="Rubik"
+                       TextAlignment="Center"
+                       FontSize="15">
+                Обучающая программа<LineBreak/>
+                "Основы работы с Blitz Smart Card Plugin"
+
+                </TextBlock>
+                <TextBlock x:Name="About_Text2"
+                       Height="250"
+                       VerticalAlignment="Top"
+                       Margin="5,60,5,0"
+                       Foreground="White"
+                       FontFamily="Rubik"
+                       TextAlignment="Justify"
+                       FontSize="16"
+                       TextWrapping="Wrap">
+                Программа предназначена для обучения сотрудников,
+                имеющих электронно-цифровую подпись, работе с
+                Blitz Smart Card Plugin, а так же для ознакомления 
+                с базовыми понятиями шифрования. <LineBreak/>
+                <LineBreak/> Версия 1.0 <LineBreak/>
+                <LineBreak/>Разработано: Шолопин Д.В.<LineBreak/>
+                <LineBreak/>Иконки от Icons8.com<LineBreak/>
+                </TextBlock>
+                <Label Content="2023"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Bottom"
+                   Margin="0,0,0,30"
+                   FontFamily="Rubik"
+                   Foreground="White"
+                   FontSize="18"
+                   FontWeight="DemiBold"/>
+                <Button x:Name="About_CloseBtn"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Margin="0,0,0,5"
+                    Content="Закрыть"
+                    Style="{StaticResource MaterialDesignFlatAccentButton}"
+                    Foreground="White"
+                    FontFamily="Rubik" Click="About_CloseBtn_Click"/>
+            </Grid>
+
+        </Border>
+
+    </Border>
+</Window>

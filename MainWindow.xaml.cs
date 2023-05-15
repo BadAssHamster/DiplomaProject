@@ -106,6 +106,9 @@ namespace DiplomaProject
             TestsLVI.IsSelected = false;
             ChallengeLVI.IsSelected = false;
             AboutLVI.IsSelected = true;
+
+            AboutWindow ShowAbout = new AboutWindow();
+            ShowAbout.ShowDialog();
         }
     }
 }

@@ -20,7 +20,7 @@
         <viewModel:MainViewModel/>
     </Window.DataContext>
 
-    <Border CornerRadius="7" Background="#3b3b3b">
+    <Border CornerRadius="7" Background="#3b3b3b" MouseDown="Border_MouseDown">
 
         <!--// Разметка приложения //-->
 
