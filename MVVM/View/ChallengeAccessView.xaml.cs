@@ -19,10 +19,10 @@ namespace DiplomaProject.MVVM.View
     
     public partial class ChallengeAccessView : UserControl
     {
-        public List<(int mark1, int mark2, int mark3, int access)> Marks = new List<(int mark1, int mark2, int mark3, int access)>();
+        public List<(int mark1, int mark2, int mark3)> Marks = new List<(int mark1, int mark2, int mark3)>();
 
         #region Метод получения оценок пользователя
-        public List<(int mark1, int mark2, int mark3, int access)> GetMarks(List<(int mark1, int mark2, int mark3, int access)> marks)
+        public List<(int mark1, int mark2, int mark3)> GetMarks(List<(int mark1, int mark2, int mark3)> marks)
         {
             string connectionString = "server=localhost;port=3307;user id=root;password=jdqVM74kzuvu3I0w;database=programdb";
             MySqlConnection connection = new MySqlConnection(connectionString);
@@ -31,12 +31,12 @@ namespace DiplomaProject.MVVM.View
             {
                 connection.Open();
 
-                MySqlCommand command = new MySqlCommand($"SELECT Test1Users, Test2Users, Test3Users, gameAccesUsers FROM users WHERE nameUsers LIKE 'denis'", connection);
+                MySqlCommand command = new MySqlCommand($"SELECT Test1Users, Test2Users, Test3Users FROM users WHERE nameUsers LIKE 'denis'", connection);
                 MySqlDataReader reader = command.ExecuteReader();
 
                 while (reader.Read())
                 {
-                    marks.Add((reader.GetInt16(0), reader.GetInt16(1), reader.GetInt16(2), reader.GetInt16(3)));
+                    marks.Add((reader.GetInt16(0), reader.GetInt16(1), reader.GetInt16(2)));
                 }
 
                 reader.Close();
