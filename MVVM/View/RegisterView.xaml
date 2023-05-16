@@ -5,15 +5,14 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DiplomaProject.MVVM.View"
-             Height="760"
-             Width="450"
+             Height="710"
+             Width="400"
              TextElement.Foreground="{DynamicResource MaterialDesignBody}"
-             Background="{x:Null}"
-             Style="{StaticResource LoginToRegView_Style}">
+             Background="{x:Null}">
 
     <materialDesign:Card UniformCornerRadius="15"
                          Background="{DynamicResource MaterialDesignPaper}"
-                         Margin="25">
+                         >
 
         <materialDesign:DialogHost CloseOnClickAway="True" 
                                    x:Name="DialogHost2">
@@ -41,7 +40,7 @@
                            FontSize="20"
                            FontFamily="Rubik"
                            FontWeight="SemiBold"
-                           Text="Ввойдите в ваш аккаунт"/>
+                           Text="Успешной Вам регистрации"/>
 
                 <TextBox x:Name="TxtUserName"
                          Margin="0,50,0,0"
@@ -49,6 +48,7 @@
                          FontSize="18"
                          BorderThickness="2"
                          materialDesign:HintAssist.Hint="Введите имя пользователя"
+                         materialDesign:TextBlockAssist.AutoToolTip="True"
                          BorderBrush="{DynamicResource MaterialDesignDivider}"
                          Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
 
@@ -61,6 +61,15 @@
                              BorderBrush="{DynamicResource MaterialDesignDivider}"
                              Style="{StaticResource MaterialDesignOutlinedPasswordBox}"/>
 
+                <PasswordBox x:Name="CheckPassword"
+                             Margin="0,20,0,0"
+                             Width="300"
+                             FontSize="18"
+                             materialDesign:HintAssist.Hint="Повторите пароль"
+                             BorderThickness="2"
+                             BorderBrush="{DynamicResource MaterialDesignDivider}"
+                             Style="{StaticResource MaterialDesignOutlinedPasswordBox}"/>
+
                 <Button x:Name="LoginBtn"
                         Margin="0,20,0,0"
                         Style="{StaticResource MaterialDesignFlatMidBgButton}"
@@ -68,15 +77,7 @@
                         Height="53" Width="300"
                         FontSize="20"
                         FontFamily="Rubik"
-                        Content="Войти"/>
-                <Button x:Name="RegisterBtn"
-                        Margin="0,20,0,0"
-                        Style="{StaticResource MaterialDesignFlatButton}"
-                        Height="53" Width="300"
-                        materialDesign:ButtonAssist.CornerRadius="10"
-                        FontSize="20"
-                        FontFamily="Rubik"
-                        Content="Зарегистрироваться"/>
+                        Content="Сохранить и войти"/>
 
             </StackPanel>
         </materialDesign:DialogHost>

@@ -20,9 +20,11 @@
         <viewModel:MainViewModel/>
     </Window.DataContext>
 
-    <materialDesign:Card UniformCornerRadius="15"
-                         Background="{DynamicResource MaterialDesignPaper}"
-                         Margin="25">
+    <Border CornerRadius="15"
+            Background="{DynamicResource MaterialDesignPaper}"
+            Margin="25"
+            materialDesign:ElevationAssist.Elevation="Dp0">
+        <Grid>
 
         <materialDesign:DialogHost CloseOnClickAway="True" 
                                    x:Name="DialogHost">
@@ -74,7 +76,7 @@
                         Style="{StaticResource MaterialDesignFlatMidBgButton}"
                         materialDesign:ButtonAssist.CornerRadius="10"
                         Height="53" Width="300"
-                        materialDesign:ShadowAssist.ShadowDepth="Depth0"
+                        materialDesign:ElevationAssist.Elevation="Dp0"
                         FontSize="20"
                         FontFamily="Rubik"
                         Content="Войти"/>
@@ -82,7 +84,7 @@
                         Margin="0,20,0,0"
                         Style="{StaticResource MaterialDesignFlatButton}"
                         Height="53" Width="300"
-                        materialDesign:ShadowAssist.ShadowDepth="Depth0"
+                        materialDesign:ElevationAssist.Elevation="Dp0"
                         materialDesign:ButtonAssist.CornerRadius="10"
                         FontSize="20"
                         FontFamily="Rubik"
@@ -92,7 +94,11 @@
             </StackPanel>
 
         </materialDesign:DialogHost>
+        
+        <ContentControl Content="{Binding AuthView}" />
+        
+        </Grid>
 
-    </materialDesign:Card>
+    </Border>
 
 </Window>
