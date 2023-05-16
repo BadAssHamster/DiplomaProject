@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Automation;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
@@ -23,6 +25,38 @@ namespace DiplomaProject.MVVM.View
         public RegisterView()
         {
             InitializeComponent();
+        }
+
+        private void RegLoginBtn_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void RegisterCloseBtn_Click(object sender, RoutedEventArgs e)
+        {
+            var authWindow = Application.Current.Windows.OfType<AuthorisationWindow>().FirstOrDefault();
+            if (authWindow != null)
+            {
+                authWindow.Close();
+            }
+        }
+
+        private void TxtUserName_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            var regex = new Regex("[^a-zA-Z0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
+        }
+
+        private void TxtPassword_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            var regex = new Regex("[^a-zA-Z0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
+        }
+
+        private void CheckPassword_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            var regex = new Regex("[^a-zA-Z0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
         }
     }
 }
