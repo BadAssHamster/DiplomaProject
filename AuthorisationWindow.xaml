@@ -15,6 +15,10 @@
         AllowsTransparency="True"
         WindowStyle="None"
         WindowStartupLocation="CenterScreen">
+   
+    <Window.DataContext>
+        <viewModel:MainViewModel/>
+    </Window.DataContext>
 
     <materialDesign:Card UniformCornerRadius="15"
                          Background="{DynamicResource MaterialDesignPaper}"
@@ -82,11 +86,13 @@
                         materialDesign:ButtonAssist.CornerRadius="10"
                         FontSize="20"
                         FontFamily="Rubik"
-                        Content="Зарегистрироваться"/>
+                        Content="Зарегистрироваться"
+                        Command="{Binding RegisterCommand}"/>
 
             </StackPanel>
+
         </materialDesign:DialogHost>
-        
+
     </materialDesign:Card>
-    
+
 </Window>

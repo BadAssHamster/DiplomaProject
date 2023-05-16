@@ -18,5 +18,8 @@
     <DataTemplate DataType="{x:Type viewModel:ChallengeAccessViewModel}">
         <view:ChallengeAccessView/>
     </DataTemplate>
+    <DataTemplate DataType="{x:Type viewModel:RegisterViewModel}">
+        <view:RegisterView/>
+    </DataTemplate>
 
 </ResourceDictionary>

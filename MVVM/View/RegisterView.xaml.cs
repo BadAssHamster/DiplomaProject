@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace DiplomaProject.Styles
+namespace DiplomaProject.MVVM.View
 {
     /// <summary>
     /// Логика взаимодействия для RegisterView.xaml
@@ -23,11 +23,6 @@ namespace DiplomaProject.Styles
         public RegisterView()
         {
             InitializeComponent();
-        }
-
-        private void RegisterCloseBtn_Click(object sender, RoutedEventArgs e)
-        {
-            
         }
     }
 }
