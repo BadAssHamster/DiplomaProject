@@ -18,6 +18,7 @@
                 <ResourceDictionary Source="Styles/RdbTestStyle.xaml" />
                 <ResourceDictionary Source="Styles/ChbTestStyle.xaml" />
                 <ResourceDictionary Source="Styles/MarkLabelStyle.xaml" />
+                <ResourceDictionary Source="Styles/AuthWindowAnimation.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
