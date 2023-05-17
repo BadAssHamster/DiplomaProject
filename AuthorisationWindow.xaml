@@ -79,7 +79,7 @@
                         materialDesign:ElevationAssist.Elevation="Dp0"
                         FontSize="20"
                         FontFamily="Rubik"
-                        Content="Войти"/>
+                        Content="Войти" Click="LoginBtn_Click"/>
                 <Button x:Name="RegisterBtn"
                         Margin="0,20,0,0"
                         Style="{StaticResource MaterialDesignFlatButton}"

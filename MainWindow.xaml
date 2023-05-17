@@ -269,11 +269,33 @@
 
                         </ListViewItem>
 
+                        <ListViewItem x:Name="UserLVI"
+                                      HorizontalAlignment="Left"
+                                      Margin="0,0,0,0">
+
+                            <StackPanel Orientation="Horizontal"
+                                        Width="230">
+
+                                <Image Source="\Assets\user_login.png"
+                                       Height="30"
+                                       Width="30"
+                                       Margin="10,0,0,0"/>
+
+                                <TextBlock x:Name="userName"
+                                           Text="Не авторизован"
+                                           Margin="25,0,0,0"
+                                           Style="{StaticResource FontStyle}" />
+
+                            </StackPanel>
+
+                        </ListViewItem>
+
                     </ListView>
+                    
 
                     <Button x:Name="LoginBtn" 
                             Content="Войти"
-                            Margin="3,70,3,0" 
+                            Margin="3,0,3,0" 
                             FontFamily="Fonts/Rubik-regular.ttf #Rubik"
                             FontSize="10" Click="LoginBtn_Click"
                             />

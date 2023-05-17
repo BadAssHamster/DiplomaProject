@@ -1,4 +1,5 @@
 ﻿using MaterialDesignThemes.Wpf;
+using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -10,6 +11,8 @@ namespace DiplomaProject
     /// </summary>
     public partial class MainWindow : Window
     {
+        public List<(int userId, string userName)> UserData { get; set; }
+        public bool Logon { get; set; }
         public MainWindow()
         {
             InitializeComponent();
