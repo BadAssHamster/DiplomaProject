@@ -41,7 +41,7 @@
                            FontSize="20"
                            FontFamily="Rubik"
                            FontWeight="SemiBold"
-                           Text="Успешной Вам регистрации"/>
+                           Text="Регистрация"/>
 
                 <TextBox x:Name="TxtUserName"
                          Margin="0,50,0,0"

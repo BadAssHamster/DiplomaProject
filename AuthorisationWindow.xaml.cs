@@ -23,7 +23,7 @@ namespace DiplomaProject
     {
         public List<(int userId, string userName)> UserDataList = new List<(int userId, string userName)>();
         public bool Logon;
-        private MainWindow _mainWindow;
+        public MainWindow _mainWindow;
         #region Метод авторизации пользователя
         public List<(int userId, string userName)> GetUser (List<(int userId, string userName)> User, string UserName, string userPass)
         {
