@@ -117,7 +117,16 @@ namespace DiplomaProject
         private void LoginBtn_Click(object sender, RoutedEventArgs e)
         {
             AuthorisationWindow authorisationWindow = new AuthorisationWindow(this);
-            authorisationWindow.ShowDialog();
+            if (Logon == false)
+            {
+                authorisationWindow.ShowDialog();
+            }
+            else
+            {
+                Logon = false;
+                LoginBtn.Content = "Войти";
+                userName.Text = "Не авторизован";
+            }
         }
     }
 }

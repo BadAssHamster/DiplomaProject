@@ -42,7 +42,7 @@ namespace DiplomaProject.MVVM.View
 
                 while (reader.Read())
                 {
-                    if (reader.GetString(0) != null)
+                    if (reader.GetString(0) != "")
                     {
                         checker = true; ;
                     }
@@ -139,38 +139,47 @@ namespace DiplomaProject.MVVM.View
 
         private void RegLoginBtn_Click(object sender, RoutedEventArgs e)
         {
-            if (TxtPassword.Password == CheckPassword.Password)
-            {
-               IsRegistered = CheckUser(TxtUserName.Text.ToString());
-            }
-            else
-            {
-                MessageBox.Show("Пароли не совпадают");
-            }
+            IsRegistered = CheckUser(TxtUserName.Text.ToString());
             if (IsRegistered == true)
             {
                 MessageBox.Show("Такой пользователь уже зарегистрирован");
+                UserDataList = null;
             }
             else
             {
-                Register(TxtUserName.Text.ToString().ToLower().Trim(), TxtPassword.Password.ToString().ToLower().Trim());
-                GetUser(UserDataList, TxtUserName.Text.ToString().ToLower().Trim(), TxtPassword.Password.ToString().ToLower().Trim());
-                if (UserDataList != null)
+                if (TxtUserName.Text.ToString() == "")
                 {
-                    var authWindow = Application.Current.Windows.OfType<AuthorisationWindow>().FirstOrDefault();
-                    var userData = UserDataList[0];
-                    authWindow._mainWindow.UserData = UserDataList;
-                    authWindow._mainWindow.Logon = true;
-                    authWindow._mainWindow.userName.Text = userData.userName.ToString().ToLower().Trim();
-                    authWindow._mainWindow.LoginBtn.Content = "Выйти";
-
-                    
-                    if (authWindow != null)
-                    {
-                        authWindow.Close();
-                    }
+                    MessageBox.Show("Введите имя пользователя");
 
                 }
+                else 
+                {
+                    if (TxtPassword.Password != CheckPassword.Password)
+                    {
+                        MessageBox.Show("Пароли не сопвпадают");
+                    }
+                    else
+                    {
+                        Register(TxtUserName.Text.ToString().ToLower().Trim(), TxtPassword.Password.ToString().ToLower().Trim());
+                        GetUser(UserDataList, TxtUserName.Text.ToString().ToLower().Trim(), TxtPassword.Password.ToString().ToLower().Trim());
+                        if (UserDataList != null)
+                        {
+                            var authWindow = Application.Current.Windows.OfType<AuthorisationWindow>().FirstOrDefault();
+                            var userData = UserDataList[0];
+                            authWindow._mainWindow.UserData = UserDataList;
+                            authWindow._mainWindow.Logon = true;
+                            authWindow._mainWindow.userName.Text = userData.userName.ToString().ToLower().Trim();
+                            authWindow._mainWindow.LoginBtn.Content = "Выйти";
+
+
+                            if (authWindow != null)
+                            {
+                                authWindow.Close();
+                            }
+
+                        }
+                    }
+                }       
             }
         }
 

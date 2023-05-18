@@ -30,7 +30,7 @@ namespace DiplomaProject.MVVM.View
         public bool answerChecked = false;
         public List<(string question, int questionId, int questionType)> Questions = new List<(string questionList, int questionId, int questionType)>();
         public List<(string answer, int checkAnswer)> Answers = new List<(string answer, int checkAnswer)>();
-        DispatcherTimer timer = new DispatcherTimer(); 
+        DispatcherTimer timer = new DispatcherTimer();
         private void Timer_Tick(object sender, EventArgs e)
         {
             TimerProgBar.Value++;
@@ -106,7 +106,7 @@ namespace DiplomaProject.MVVM.View
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                MessageBox.Show(ex.Message);
             }
             finally
             {
@@ -296,6 +296,47 @@ namespace DiplomaProject.MVVM.View
         }
         #endregion
 
+        #region Метод проверки оценки
+        public bool MarkCheck(int userId, int mark)
+        {
+            bool flag = false;
+            string connectionString = "server=localhost;port=3307;user id=root;password=jdqVM74kzuvu3I0w;database=programdb";
+            MySqlConnection connection = new MySqlConnection(connectionString);
+
+            try
+            {
+                connection.Open();
+
+                MySqlCommand command = new MySqlCommand($"SELECT test1Users FROM users WHERE idUsers={userId};", connection);
+                MySqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    if (mark > reader.GetInt32(0))
+                    {
+                        flag = true;
+                    }
+                    else
+                    {
+                        flag = false;
+                    }
+                }
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return flag;
+
+        }
+        #endregion
+
         public EcpTestView()
         {
             InitializeComponent();
@@ -366,7 +407,35 @@ namespace DiplomaProject.MVVM.View
                 testMark = 5;
             }
 
-            MessageBox.Show($"Вы ответили на {EcpScore} из 10 вопросов.\nВаша оценка: {testMark}", "Результат");
+            var mainWindow = Application.Current.Windows.OfType<MainWindow>().FirstOrDefault();
+            var data = mainWindow.UserData[0];
+            bool isBetter = MarkCheck(data.userId, testMark);
+            if (isBetter == true)
+            {
+                string connectionString = "server=localhost;port=3307;user id=root;password=jdqVM74kzuvu3I0w;database=programdb";
+                MySqlConnection connection = new MySqlConnection(connectionString);
+
+                try
+                {
+                    connection.Open();
+
+                    MySqlCommand command = new MySqlCommand($"UPDATE users SET test1Users = {testMark} WHERE idUsers = {data.userId};", connection);
+                    command.ExecuteNonQuery();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+                MessageBox.Show($"Вы ответили на {EcpScore} из 10 вопросов.\nВаша оценка обновлена на {testMark}", "Результат");
+            } else
+            {
+                MessageBox.Show($"Вы ответили на {EcpScore} из 10 вопросов.\nВаша оценка: {testMark}. Оценка не была обновлена.", "Результат");
+            }            
 
         }
     }
