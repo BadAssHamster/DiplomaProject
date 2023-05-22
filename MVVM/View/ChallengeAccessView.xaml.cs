@@ -58,17 +58,29 @@ namespace DiplomaProject.MVVM.View
         {
             InitializeComponent();
             var mainWindow = Application.Current.Windows.OfType<MainWindow>().FirstOrDefault();
-            var data = mainWindow.UserData[0];
-            GetMarks(Marks, data.userId);
-            var marks = Marks[0];
-            Mark1Lbl.Content = marks.mark1.ToString();
-            Mark2Lbl.Content = marks.mark2.ToString();
-            Mark3Lbl.Content = marks.mark3.ToString();
+            var logon = mainWindow.Logon;
+            if(logon == true)
+            {
+                var data = mainWindow.UserData[0];
+                GetMarks(Marks, data.userId);
+                var marks = Marks[0];
+                Mark1Lbl.Content = marks.mark1.ToString();
+                Mark2Lbl.Content = marks.mark2.ToString();
+                Mark3Lbl.Content = marks.mark3.ToString();
 
-            Mark1Lbl.Foreground = marks.mark1 == 0 && marks.mark1 < 4 ? Brushes.DarkOrange : Brushes.Green;
-            Mark2Lbl.Foreground = marks.mark2 == 0 && marks.mark2 < 4 ? Brushes.DarkOrange : Brushes.Green;
-            Mark3Lbl.Foreground = marks.mark3 == 0 && marks.mark3 < 4 ? Brushes.DarkOrange : Brushes.Green;
-            StartChallenge.IsEnabled = marks.mark1 > 3 && marks.mark2 > 3  && marks.mark3 > 3 ? true : false;
+                Mark1Lbl.Foreground = marks.mark1 == 0 && marks.mark1 < 4 ? Brushes.DarkOrange : Brushes.Green;
+                Mark2Lbl.Foreground = marks.mark2 == 0 && marks.mark2 < 4 ? Brushes.DarkOrange : Brushes.Green;
+                Mark3Lbl.Foreground = marks.mark3 == 0 && marks.mark3 < 4 ? Brushes.DarkOrange : Brushes.Green;
+                StartChallenge.IsEnabled = marks.mark1 > 3 && marks.mark2 > 3 && marks.mark3 > 3 ? true : false;
+            }
+            else
+            {
+                Mark1Lbl.Content = "0";
+                Mark2Lbl.Content = "0";
+                Mark3Lbl.Content = "0";
+                StartChallenge.IsEnabled = false;
+            }
+
 
         }
     }
