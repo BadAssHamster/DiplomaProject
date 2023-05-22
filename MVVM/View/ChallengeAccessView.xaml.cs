@@ -22,7 +22,7 @@ namespace DiplomaProject.MVVM.View
         public List<(int mark1, int mark2, int mark3)> Marks = new List<(int mark1, int mark2, int mark3)>();
 
         #region Метод получения оценок пользователя
-        public List<(int mark1, int mark2, int mark3)> GetMarks(List<(int mark1, int mark2, int mark3)> marks)
+        public List<(int mark1, int mark2, int mark3)> GetMarks(List<(int mark1, int mark2, int mark3)> marks, int userId)
         {
             string connectionString = "server=localhost;port=3307;user id=root;password=jdqVM74kzuvu3I0w;database=programdb";
             MySqlConnection connection = new MySqlConnection(connectionString);
@@ -31,7 +31,7 @@ namespace DiplomaProject.MVVM.View
             {
                 connection.Open();
 
-                MySqlCommand command = new MySqlCommand($"SELECT Test1Users, Test2Users, Test3Users FROM users WHERE nameUsers LIKE 'denis'", connection);
+                MySqlCommand command = new MySqlCommand($"SELECT Test1Users, Test2Users, Test3Users FROM users WHERE idUsers={userId}", connection);
                 MySqlDataReader reader = command.ExecuteReader();
 
                 while (reader.Read())
@@ -57,7 +57,9 @@ namespace DiplomaProject.MVVM.View
     public ChallengeAccessView()
         {
             InitializeComponent();
-            GetMarks(Marks);
+            var mainWindow = Application.Current.Windows.OfType<MainWindow>().FirstOrDefault();
+            var data = mainWindow.UserData[0];
+            GetMarks(Marks, data.userId);
             var marks = Marks[0];
             Mark1Lbl.Content = marks.mark1.ToString();
             Mark2Lbl.Content = marks.mark2.ToString();
