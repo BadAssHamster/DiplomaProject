@@ -12,8 +12,12 @@
                               Background="{TemplateBinding Background}">
                             <TextBlock Text="{TemplateBinding Property=Content}"
                                        VerticalAlignment="Center"
-                                       HorizontalAlignment="Left"
-                                       Margin="7,0,0,0"/>
+                                       HorizontalAlignment="Center"
+                                       Margin="0,0,0,0"
+                                       Height="27"
+                                       Width="27"
+                                       FontSize="16"
+                                       TextAlignment="Center"/>
                         </Grid>
                     </ControlTemplate>
                 </Setter.Value>

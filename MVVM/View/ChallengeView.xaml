@@ -14,11 +14,11 @@
     <Grid>
 
         <Border x:Name="WordsBorder"
-                Width="400"
-                Height="360"
+                Width="405"
+                Height="351"
                 Margin="0,0,0,180"
                 Background="White"
-                materialDesign:ElevationAssist.Elevation="Dp1">
+                materialDesign:ElevationAssist.Elevation="Dp0">
             <Grid OpacityMask="Black">
                 
                 <Grid.RowDefinitions>
@@ -427,9 +427,1462 @@
                           FontWeight="Bold"
                           FontSize="18"/>
                 </Border>
+                
+                <!--Четвертая линия-->
+
+                <Border Grid.Row="3" Grid.Column="0"
+                        BorderThickness="1" BorderBrush="Black">
+
+                    <CheckBox Grid.Row="3" Grid.Column="0"
+                          Content="Ш" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="3" Grid.Column="1"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="3" Grid.Column="1"
+                          Content="И" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="3" Grid.Column="2"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="3" Grid.Column="2"
+                          Content="Е" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="3" Grid.Column="3"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="3" Grid.Column="3"
+                          Content="Н" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="3" Grid.Column="4"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="3" Grid.Column="4"
+                          Content="А" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="3" Grid.Column="5"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="3" Grid.Column="5"
+                          Content="Н" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="3" Grid.Column="6"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="3" Grid.Column="6"
+                          Content="С" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="3" Grid.Column="7"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="3" Grid.Column="7"
+                          Content="О" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="3" Grid.Column="8"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="3" Grid.Column="8"
+                          Content="Ч" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="3" Grid.Column="9"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="3" Grid.Column="9"
+                          Content="И" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="3" Grid.Column="10"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="3" Grid.Column="10"
+                          Content="О" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="3" Grid.Column="11"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="3" Grid.Column="11"
+                          Content="Е" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="3" Grid.Column="12"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="3" Grid.Column="12"
+                          Content="М" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="3" Grid.Column="13"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="3" Grid.Column="13"
+                          Content="О" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="3" Grid.Column="14"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="3" Grid.Column="14"
+                          Content="Ь" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                
+                <!--Пятая линия-->
+
+                <Border Grid.Row="4" Grid.Column="0"
+                        BorderThickness="1" BorderBrush="Black">
+
+                    <CheckBox Grid.Row="4" Grid.Column="0"
+                          Content="О" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="4" Grid.Column="1"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="4" Grid.Column="1"
+                          Content="Н" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="4" Grid.Column="2"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="4" Grid.Column="2"
+                          Content="Д" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="4" Grid.Column="3"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="4" Grid.Column="3"
+                          Content="Ц" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="4" Grid.Column="4"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="4" Grid.Column="4"
+                          Content="Л" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="4" Grid.Column="5"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="4" Grid.Column="5"
+                          Content="Ь" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="4" Grid.Column="6"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="4" Grid.Column="6"
+                          Content="Т" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="4" Grid.Column="7"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="4" Grid.Column="7"
+                          Content="Ь" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="4" Grid.Column="8"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="4" Grid.Column="8"
+                          Content="Ь" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="4" Grid.Column="9"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="4" Grid.Column="9"
+                          Content="Ф" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="4" Grid.Column="10"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="4" Grid.Column="10"
+                          Content="Т" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="4" Grid.Column="11"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="4" Grid.Column="11"
+                          Content="А" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="4" Grid.Column="12"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="4" Grid.Column="12"
+                          Content="У" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="4" Grid.Column="13"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="4" Grid.Column="13"
+                          Content="Т" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="4" Grid.Column="14"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="4" Grid.Column="14"
+                          Content="Е" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                
+                <!--Шестая линия-->
+
+                <Border Grid.Row="5" Grid.Column="0"
+                        BorderThickness="1" BorderBrush="Black">
+
+                    <CheckBox Grid.Row="5" Grid.Column="0"
+                          Content="К" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="5" Grid.Column="1"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="5" Grid.Column="1"
+                          Content="Ф" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="5" Grid.Column="2"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="5" Grid.Column="2"
+                          Content="Е" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="5" Grid.Column="3"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="5" Grid.Column="3"
+                          Content="И" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="5" Grid.Column="4"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="5" Grid.Column="4"
+                          Content="А" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="5" Grid.Column="5"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="5" Grid.Column="5"
+                          Content="Н" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="5" Grid.Column="6"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="5" Grid.Column="6"
+                          Content="О" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="5" Grid.Column="7"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="5" Grid.Column="7"
+                          Content="С" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="5" Grid.Column="8"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="5" Grid.Column="8"
+                          Content="Т" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="5" Grid.Column="9"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="5" Grid.Column="9"
+                          Content="Р" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="5" Grid.Column="10"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="5" Grid.Column="10"
+                          Content="А" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="5" Grid.Column="11"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="5" Grid.Column="11"
+                          Content="Ф" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="5" Grid.Column="12"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="5" Grid.Column="12"
+                          Content="И" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="5" Grid.Column="13"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="5" Grid.Column="13"
+                          Content="Т" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="5" Grid.Column="14"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="5" Grid.Column="14"
+                          Content="Н" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                
+                <!--Седьмая линия-->
+
+                <Border Grid.Row="6" Grid.Column="0"
+                        BorderThickness="1" BorderBrush="Black">
+
+                    <CheckBox Grid.Row="6" Grid.Column="0"
+                          Content="Ь" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="6" Grid.Column="1"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="6" Grid.Column="1"
+                          Content="С" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="6" Grid.Column="2"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="6" Grid.Column="2"
+                          Content="И" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="6" Grid.Column="3"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="6" Grid.Column="3"
+                          Content="П" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="6" Grid.Column="4"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="6" Grid.Column="4"
+                          Content="Д" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="6" Grid.Column="5"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="6" Grid.Column="5"
+                          Content="О" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="6" Grid.Column="6"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="6" Grid.Column="6"
+                          Content="П" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="6" Grid.Column="7"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="6" Grid.Column="7"
+                          Content="Ь" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="6" Grid.Column="8"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="6" Grid.Column="8"
+                          Content="Т" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="6" Grid.Column="9"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="6" Grid.Column="9"
+                          Content="М" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="6" Grid.Column="10"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="6" Grid.Column="10"
+                          Content="М" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="6" Grid.Column="11"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="6" Grid.Column="11"
+                          Content="И" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="6" Grid.Column="12"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="6" Grid.Column="12"
+                          Content="И" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="6" Grid.Column="13"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="6" Grid.Column="13"
+                          Content="Ф" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="6" Grid.Column="14"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="6" Grid.Column="14"
+                          Content="Р" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                
+                <!--Восьмая линия-->
+
+                <Border Grid.Row="7" Grid.Column="0"
+                        BorderThickness="1" BorderBrush="Black">
+
+                    <CheckBox Grid.Row="7" Grid.Column="0"
+                          Content="С" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="7" Grid.Column="1"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="7" Grid.Column="1"
+                          Content="Т" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="7" Grid.Column="2"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="7" Grid.Column="2"
+                          Content="Н" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="7" Grid.Column="3"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="7" Grid.Column="3"
+                          Content="Е" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="7" Grid.Column="4"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="7" Grid.Column="4"
+                          Content="К" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="7" Grid.Column="5"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="7" Grid.Column="5"
+                          Content="О" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="7" Grid.Column="6"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="7" Grid.Column="6"
+                          Content="Т" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="7" Grid.Column="7"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="7" Grid.Column="7"
+                          Content="О" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="7" Grid.Column="8"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="7" Grid.Column="8"
+                          Content="С" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="7" Grid.Column="9"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="7" Grid.Column="9"
+                          Content="Е" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="7" Grid.Column="10"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="7" Grid.Column="10"
+                          Content="И" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="7" Grid.Column="11"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="7" Grid.Column="11"
+                          Content="К" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="7" Grid.Column="12"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="7" Grid.Column="12"
+                          Content="Ш" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="7" Grid.Column="13"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="7" Grid.Column="13"
+                          Content="Я" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="7" Grid.Column="14"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="7" Grid.Column="14"
+                          Content="О" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                
+                <!--Девятая линия-->
+
+                <Border Grid.Row="8" Grid.Column="0"
+                        BorderThickness="1" BorderBrush="Black">
+
+                    <CheckBox Grid.Row="8" Grid.Column="0"
+                          Content="Е" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="8" Grid.Column="1"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="8" Grid.Column="1"
+                          Content="А" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="8" Grid.Column="2"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="8" Grid.Column="2"
+                          Content="К" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="8" Grid.Column="3"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="8" Grid.Column="3"
+                          Content="И" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="8" Grid.Column="4"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="8" Grid.Column="4"
+                          Content="Г" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="8" Grid.Column="5"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="8" Grid.Column="5"
+                          Content="А" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="8" Grid.Column="6"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="8" Grid.Column="6"
+                          Content="Л" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="8" Grid.Column="7"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="8" Grid.Column="7"
+                          Content="Н" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="8" Grid.Column="8"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="8" Grid.Column="8"
+                          Content="Р" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="8" Grid.Column="9"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="8" Grid.Column="9"
+                          Content="Т" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="8" Grid.Column="10"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="8" Grid.Column="10"
+                          Content="С" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="8" Grid.Column="11"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="8" Grid.Column="11"
+                          Content="А" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="8" Grid.Column="12"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="8" Grid.Column="12"
+                          Content="Ц" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="8" Grid.Column="13"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="8" Grid.Column="13"
+                          Content="И" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="8" Grid.Column="14"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="8" Grid.Column="14"
+                          Content="С" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                
+                <!--Десятая линия-->
+
+                <Border Grid.Row="9" Grid.Column="0"
+                        BorderThickness="1" BorderBrush="Black">
+
+                    <CheckBox Grid.Row="9" Grid.Column="0"
+                          Content="Р" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="9" Grid.Column="1"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="9" Grid.Column="1"
+                          Content="Т" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="9" Grid.Column="2"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="9" Grid.Column="2"
+                          Content="И" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="9" Grid.Column="3"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="9" Grid.Column="3"
+                          Content="Ф" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="9" Grid.Column="4"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="9" Grid.Column="4"
+                          Content="И" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="9" Grid.Column="5"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="9" Grid.Column="5"
+                          Content="Н" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="9" Grid.Column="6"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="9" Grid.Column="6"
+                          Content="П" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="9" Grid.Column="7"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="9" Grid.Column="7"
+                          Content="Ч" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="9" Grid.Column="8"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="9" Grid.Column="8"
+                          Content="И" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="9" Grid.Column="9"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="9" Grid.Column="9"
+                          Content="А" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="9" Grid.Column="10"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="9" Grid.Column="10"
+                          Content="М" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="9" Grid.Column="11"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="9" Grid.Column="11"
+                          Content="Е" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="9" Grid.Column="12"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="9" Grid.Column="12"
+                          Content="Т" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="9" Grid.Column="13"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="9" Grid.Column="13"
+                          Content="С" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="9" Grid.Column="14"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="9" Grid.Column="14"
+                          Content="И" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                
+                <!--Одиннадцатая линия-->
+
+                <Border Grid.Row="10" Grid.Column="0"
+                        BorderThickness="1" BorderBrush="Black">
+
+                    <CheckBox Grid.Row="10" Grid.Column="0"
+                          Content="Н" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="10" Grid.Column="1"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="10" Grid.Column="1"
+                          Content="Р" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="10" Grid.Column="2"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="10" Grid.Column="2"
+                          Content="А" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="10" Grid.Column="3"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="10" Grid.Column="3"
+                          Content="У" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="10" Grid.Column="4"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="10" Grid.Column="4"
+                          Content="З" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="10" Grid.Column="5"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="10" Grid.Column="5"
+                          Content="Е" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="10" Grid.Column="6"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="10" Grid.Column="6"
+                          Content="Р" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="10" Grid.Column="7"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="10" Grid.Column="7"
+                          Content="Д" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="10" Grid.Column="8"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="10" Grid.Column="8"
+                          Content="А" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="10" Grid.Column="9"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="10" Grid.Column="9"
+                          Content="Л" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="10" Grid.Column="10"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="10" Grid.Column="10"
+                          Content="Д" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="10" Grid.Column="11"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="10" Grid.Column="11"
+                          Content="О" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="10" Grid.Column="12"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="10" Grid.Column="12"
+                          Content="П" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="10" Grid.Column="13"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="10" Grid.Column="13"
+                          Content="Н" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="10" Grid.Column="14"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="10" Grid.Column="14"
+                          Content="К" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+
+                <!--Двенадцатая линия-->
+
+                <Border Grid.Row="11" Grid.Column="0"
+                        BorderThickness="1" BorderBrush="Black">
+
+                    <CheckBox Grid.Row="11" Grid.Column="0"
+                          Content="Е" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="11" Grid.Column="1"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="11" Grid.Column="1"
+                          Content="Б" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="11" Grid.Column="2"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="11" Grid.Column="2"
+                          Content="Е" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="11" Grid.Column="3"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="11" Grid.Column="3"
+                          Content="К" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="11" Grid.Column="4"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="11" Grid.Column="4"
+                          Content="М" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="11" Grid.Column="5"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="11" Grid.Column="5"
+                          Content="О" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="11" Grid.Column="6"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="11" Grid.Column="6"
+                          Content="Н" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="11" Grid.Column="7"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="11" Grid.Column="7"
+                          Content="И" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="11" Grid.Column="8"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="11" Grid.Column="8"
+                          Content="Л" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="11" Grid.Column="9"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="11" Grid.Column="9"
+                          Content="И" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="11" Grid.Column="10"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="11" Grid.Column="10"
+                          Content="Н" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="11" Grid.Column="11"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="11" Grid.Column="11"
+                          Content="Ь" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="11" Grid.Column="12"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="11" Grid.Column="12"
+                          Content="Т" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="11" Grid.Column="13"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="1" Grid.Column="13"
+                          Content="И" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="11" Grid.Column="14"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="11" Grid.Column="14"
+                          Content="О" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+
+                <!--Тринадцатая линия-->
+
+                <Border Grid.Row="12" Grid.Column="0"
+                        BorderThickness="1" BorderBrush="Black">
+
+                    <CheckBox Grid.Row="12" Grid.Column="0"
+                          Content="О" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="12" Grid.Column="1"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="12" Grid.Column="1"
+                          Content="Т" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="12" Grid.Column="2"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="12" Grid.Column="2"
+                          Content="Р" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="12" Grid.Column="3"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="12" Grid.Column="3"
+                          Content="А" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="12" Grid.Column="4"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="12" Grid.Column="4"
+                          Content="Е" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="12" Grid.Column="5"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="12" Grid.Column="5"
+                          Content="С" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="12" Grid.Column="6"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="12" Grid.Column="6"
+                          Content="Т" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="12" Grid.Column="7"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="12" Grid.Column="7"
+                          Content="Ь" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="12" Grid.Column="8"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="12" Grid.Column="8"
+                          Content="Л" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="12" Grid.Column="9"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="12" Grid.Column="9"
+                          Content="А" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="12" Grid.Column="10"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="12" Grid.Column="10"
+                          Content="Н" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="12" Grid.Column="11"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="12" Grid.Column="11"
+                          Content="О" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="12" Grid.Column="12"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="12" Grid.Column="12"
+                          Content="С" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="12" Grid.Column="13"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="12" Grid.Column="13"
+                          Content="П" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+                <Border Grid.Row="12" Grid.Column="14"
+                        BorderThickness="1" BorderBrush="Black">
+                    <CheckBox Grid.Row="12" Grid.Column="14"
+                          Content="Д" Style="{StaticResource TestCheckBoxStyle}"
+                          Foreground="Black"
+                          FontWeight="Bold"
+                          FontSize="18"/>
+                </Border>
+
 
             </Grid>
         </Border>
-            
+
+        <TextBox x:Name="AnswerTb"
+                 VerticalAlignment="Bottom"
+                 HorizontalAlignment="Center"
+                 Margin="0,0,0,130"
+                 Height="35"
+                 Width="405"
+                 Background="White"
+                 BorderBrush="{DynamicResource MaterialDesignDivider}"
+                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                 materialDesign:ElevationAssist.Elevation="Dp1"
+                 Foreground="Black"
+                 FontSize="20"/>
+
+        <Button x:Name="DropWordBtn"
+                Margin="0,0,205,88"
+                Style="{StaticResource MaterialDesignFlatMidBgButton}"
+                materialDesign:ButtonAssist.CornerRadius="10"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Center"
+                Height="35" Width="200"
+                materialDesign:ElevationAssist.Elevation="Dp0"
+                FontSize="20"
+                FontFamily="Rubik"
+                Content="Сбросить слово"/>
+
+        <Button x:Name="DropProgressBtn"
+                Margin="205,0,0,88"
+                Style="{StaticResource MaterialDesignFlatMidBgButton}"
+                materialDesign:ButtonAssist.CornerRadius="10"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Center"
+                Height="35" Width="200"
+                materialDesign:ElevationAssist.Elevation="Dp0"
+                FontSize="20"
+                FontFamily="Rubik"
+                Content="Сбросить игру" Background="#FFA70606"/>
+
+        <Button x:Name="SubmitBtn"
+                Margin="0,0,0,50"
+                Style="{StaticResource MaterialDesignFlatMidBgButton}"
+                materialDesign:ButtonAssist.CornerRadius="10"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Center"
+                Height="35" Width="405"
+                materialDesign:ElevationAssist.Elevation="Dp0"
+                FontSize="20"
+                FontFamily="Rubik"
+                Content="Проверить" IsDefault="True" Background="#FF3CA527"/>
+
+        <StackPanel x:Name="LeftAnswersPanel"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Margin="8,20,0,0">
+            <TextBlock x:Name="Answer_1"
+                       Foreground="LightGray"
+                       FontFamily="Rubik"
+                       FontSize="16"
+                       HorizontalAlignment="Center">
+                КРИПТОЛОГИЯ
+            </TextBlock>
+            <TextBlock x:Name="Answer_2"
+                       Foreground="LightGray"
+                       FontFamily="Rubik"
+                       FontSize="16"
+                       Margin="0,10,0,0"
+                       HorizontalAlignment="Center">
+                ЦЕЛОСТНОСТЬ
+            </TextBlock>
+            <TextBlock x:Name="Answer_3"
+                       Foreground="LightGray"
+                       FontFamily="Rubik"
+                       FontSize="16"
+                       Margin="0,10,0,0"
+                       HorizontalAlignment="Center">
+                КЛЮЧ
+            </TextBlock>
+            <TextBlock x:Name="Answer_4"
+                       Foreground="LightGray"
+                       FontFamily="Rubik"
+                       FontSize="16"
+                       Margin="0,10,0,0"
+                       HorizontalAlignment="Center">
+                ДЕШИФРАТОР
+            </TextBlock>
+            <TextBlock x:Name="Answer_5"
+                       Foreground="LightGray"
+                       FontFamily="Rubik"
+                       FontSize="16"
+                       Margin="0,10,0,0"
+                       HorizontalAlignment="Center">
+                ИДЕНТИФИЦИРУЕМОСТЬ
+            </TextBlock>
+            <TextBlock x:Name="Answer_6"
+                       Foreground="LightGray"
+                       FontFamily="Rubik"
+                       FontSize="16"
+                       Margin="0,10,0,0"
+                       HorizontalAlignment="Center">
+                ШИФРОВАНИЕ
+            </TextBlock>
+            <TextBlock x:Name="Answer_7"
+                       Foreground="LightGray"
+                       FontFamily="Rubik"
+                       FontSize="16"
+                       Margin="0,10,0,0"
+                       HorizontalAlignment="Center">
+                КОНФЕДЕНЦИАЛЬНОСТЬ
+            </TextBlock>
+            <TextBlock x:Name="Answer_8"
+                       Foreground="LightGray"
+                       FontFamily="Rubik"
+                       FontSize="16"
+                       Margin="0,10,0,0"
+                       HorizontalAlignment="Center">
+                АУТЕНТИФИКАЦИЯ
+            </TextBlock>
+            <TextBlock x:Name="Answer_9"
+                       Foreground="LightGray"
+                       FontFamily="Rubik"
+                       FontSize="16"
+                       Margin="0,10,0,0"
+                       HorizontalAlignment="Center">
+                ШТФРОСИСТЕМА
+            </TextBlock>
+            <TextBlock x:Name="Answer_10"
+                       Foreground="LightGray"
+                       FontFamily="Rubik"
+                       FontSize="16"
+                       Margin="0,10,0,0"
+                       HorizontalAlignment="Center">
+                СИММЕТРИЧНОСТЬ
+            </TextBlock>
+        </StackPanel>
+
+        <StackPanel x:Name="RightAnswersPanel"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Top"
+                    Margin="0,20,30,0"
+                    >
+            <TextBlock x:Name="Answer_11"
+                       Foreground="LightGray"
+                       FontFamily="Rubik"
+                       FontSize="16"
+                       HorizontalAlignment="Center">
+                ПОДПИСЬ
+            </TextBlock>
+            <TextBlock x:Name="Answer_12"
+                       Foreground="LightGray"
+                       FontFamily="Rubik"
+                       FontSize="16"
+                       Margin="0,10,0,0"
+                       HorizontalAlignment="Center">
+                ТОКЕН
+            </TextBlock>
+            <TextBlock x:Name="Answer_13"
+                       Foreground="LightGray"
+                       FontFamily="Rubik"
+                       FontSize="16"
+                       Margin="0,10,0,0"
+                       HorizontalAlignment="Center">
+                СЕРТИФИКАТ
+            </TextBlock>
+            <TextBlock x:Name="Answer_14"
+                       Foreground="LightGray"
+                       FontFamily="Rubik"
+                       FontSize="16"
+                       Margin="0,10,0,0"
+                       HorizontalAlignment="Center">
+                БРАЗУЕР
+            </TextBlock>
+            <TextBlock x:Name="Answer_15"
+                       Foreground="LightGray"
+                       FontFamily="Rubik"
+                       FontSize="16"
+                       Margin="0,10,0,0"
+                       HorizontalAlignment="Center">
+                НЕОТРЕКАЕМОСТЬ
+            </TextBlock>
+            <TextBlock x:Name="Answer_16"
+                       Foreground="LightGray"
+                       FontFamily="Rubik"
+                       FontSize="16"
+                       Margin="0,10,0,0"
+                       HorizontalAlignment="Center">
+                АЛЛАДИН
+            </TextBlock>
+            <TextBlock x:Name="Answer_17"
+                       Foreground="LightGray"
+                       FontFamily="Rubik"
+                       FontSize="16"
+                       Margin="0,10,0,0"
+                       HorizontalAlignment="Center">
+                ПОДЛИННОСТЬ
+            </TextBlock>
+            <TextBlock x:Name="Answer_18"
+                       Foreground="LightGray"
+                       FontFamily="Rubik"
+                       FontSize="16"
+                       Margin="0,10,0,0"
+                       HorizontalAlignment="Center">
+                ПИНКОД
+            </TextBlock>
+            <TextBlock x:Name="Answer_19"
+                       Foreground="LightGray"
+                       FontFamily="Rubik"
+                       FontSize="16"
+                       Margin="0,10,0,0"
+                       HorizontalAlignment="Center">
+                ПЛАГИН
+            </TextBlock>
+        </StackPanel>
+
     </Grid>
 </UserControl>
