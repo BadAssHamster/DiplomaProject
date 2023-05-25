@@ -68,7 +68,7 @@ namespace DiplomaProject.MVVM.View
         #region Метод добавления пользователя в базу данных
         public void Register(string userName, string userPass)
         {
-            if (TxtUserName.Text.ToString().ToLower().Contains("drop"))
+            if (TxtUserName.Text.ToString().ToLower().Contains("drop") || TxtPassword.Password.ToString().ToLower().Contains("drop"))
             {
                 MessageBox.Show("Без SQL инъекций");
             }
@@ -156,7 +156,7 @@ namespace DiplomaProject.MVVM.View
                 {
                     if (TxtPassword.Password != CheckPassword.Password)
                     {
-                        MessageBox.Show("Пароли не сопвпадают");
+                        MessageBox.Show("Пароли не совпадают");
                     }
                     else
                     {

@@ -70,22 +70,28 @@ namespace DiplomaProject
 
         private void LoginBtn_Click(object sender, RoutedEventArgs e)
         {
-            GetUser(UserDataList, TxtUserName.Text.ToString(), TxtPassword.Password.ToString());
-            if (UserDataList != null)
+            if (TxtUserName.Text.ToString().ToLower().Contains("drop") || TxtPassword.Password.ToString().ToLower().Contains("drop"))
             {
-                
-                var userData = UserDataList[0];
-                _mainWindow.UserData = UserDataList;
-                _mainWindow.Logon = true;
-                _mainWindow.userName.Text = userData.userName.ToString();
-                _mainWindow.LoginBtn.Content = "Выйти";
-                this.Close();
+                MessageBox.Show("Без SQL инъекций");
             }
             else
             {
-                MessageBox.Show("Введены неверные логин или пароль", "Внимание!");
-            }
+                GetUser(UserDataList, TxtUserName.Text.ToString(), TxtPassword.Password.ToString());
+                if (UserDataList != null)
+                {
 
+                    var userData = UserDataList[0];
+                    _mainWindow.UserData = UserDataList;
+                    _mainWindow.Logon = true;
+                    _mainWindow.userName.Text = userData.userName.ToString();
+                    _mainWindow.LoginBtn.Content = "Выйти";
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Введены неверные логин или пароль", "Внимание!");
+                }
+            }
         }
     }
 }

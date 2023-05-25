@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace DiplomaProject.MVVM.View
 {
@@ -24,6 +25,18 @@ namespace DiplomaProject.MVVM.View
         public string Answer;
         public string AnswerForTb;
         public List<(string Key, string Value)> Answers;
+        public int seconds = 0;
+        public int score = 0;
+        DispatcherTimer timer = new DispatcherTimer();
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            seconds += 1;
+        }
+        private void ResetTimer()
+        {
+            seconds = 0;
+            timer.Stop();
+        }
 
         public static IEnumerable<T> FindVisualChildren<T>(DependencyObject parent) where T : DependencyObject
         {
@@ -73,10 +86,14 @@ namespace DiplomaProject.MVVM.View
                 ("Answer_18", "ПИНКОД"),
                 ("Answer_19", "ПЛАГИН")
             };
+            timer.Interval = new TimeSpan(0, 0, 1);
+            timer.Tick += new EventHandler(Timer_Tick);
+            ResetTimer();
+            timer.Start();
         }
 
         private void CheckBox_Checked(object sender, RoutedEventArgs e)
-        {
+         {
             CheckBox checkBox = sender as CheckBox;
             if (checkBox != null && checkBox.IsChecked == true)
             {
@@ -136,6 +153,8 @@ namespace DiplomaProject.MVVM.View
             AnswerForTb = "";
             Answer = "";
             AnswerTb.Text = "";
+            score = 0;
+            ResetTimer();
         }
 
         private void SubmitBtn_Click(object sender, RoutedEventArgs e)
@@ -177,12 +196,18 @@ namespace DiplomaProject.MVVM.View
                             }
                         }
                     }
+                    score++;
                 } 
 
             }
             AnswerForTb = "";
             Answer = "";
             AnswerTb.Text = "";
+            if(score == 19)
+            {
+                timer.Stop();
+                MessageBox.Show($"Поздравляем!!!\n Вы справились за {seconds / 60} минут {seconds % 60} секунд", "Поздравления");
+            }
         }
     }
 }
