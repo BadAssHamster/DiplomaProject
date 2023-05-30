@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,17 +14,15 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
-using DiplomaProject.MVVM.ViewModel;
-using MaterialDesignColors.Recommended;
-using Microsoft.Xaml.Behaviors.Core;
-using MySql.Data.MySqlClient;
 
 namespace DiplomaProject.MVVM.View
 {
-    
-    public partial class EcpTestView : UserControl
+    /// <summary>
+    /// Логика взаимодействия для BscpTestView.xaml
+    /// </summary>
+    public partial class BscpTestView : UserControl
     {
-        public int TestIndex = 1;
+        public int TestIndex = 2;
         public int questionCounter = -1;
         public int EcpScore = 0;
         public int secondsLeft = 0;
@@ -336,8 +335,7 @@ namespace DiplomaProject.MVVM.View
 
         }
         #endregion
-
-        public EcpTestView()
+        public BscpTestView()
         {
             InitializeComponent();
             var mainWindow = Application.Current.Windows.OfType<MainWindow>().FirstOrDefault();
@@ -349,9 +347,8 @@ namespace DiplomaProject.MVVM.View
             NextQuestion();
             timer.Interval = new TimeSpan(0, 0, 1);
             timer.Tick += new EventHandler(Timer_Tick);
-
         }
-               
+
         private void ExitTestBtn_Click(object sender, RoutedEventArgs e)
         {
             MessageBoxResult result = MessageBox.Show("Если сейчас Вы закроете тест, Ваш результ не будет сохранен. Вы уверенны?", "Внимание!", MessageBoxButton.YesNo);
@@ -373,7 +370,7 @@ namespace DiplomaProject.MVVM.View
             {
                 MessageBox.Show("Вы не ответили на вопрос!");
             }
-            else 
+            else
             {
                 answerChecked = false;
                 NextQuestion();
@@ -401,15 +398,15 @@ namespace DiplomaProject.MVVM.View
         {
             int testMark = 0;
 
-            if(EcpScore <= 4)
+            if (EcpScore <= 4)
             {
                 testMark = 2;
             }
-            else if(EcpScore > 4 && EcpScore < 7)
-            { 
+            else if (EcpScore > 4 && EcpScore < 7)
+            {
                 testMark = 3;
             }
-            else if(EcpScore > 6 && EcpScore < 9)
+            else if (EcpScore > 6 && EcpScore < 9)
             {
                 testMark = 4;
             }
@@ -419,7 +416,7 @@ namespace DiplomaProject.MVVM.View
             }
 
             var mainWindow = Application.Current.Windows.OfType<MainWindow>().FirstOrDefault();
-                        
+
             if (mainWindow.Logon == true)
             {
                 var data = mainWindow.UserData[0];

@@ -27,6 +27,7 @@ namespace DiplomaProject.MVVM.View
         public TheoryView()
         {
             InitializeComponent();
+            getTheory(1, TextContent);
         }
 
         public void getTheory(int theoryNumber, RichTextBox TextContent)
@@ -37,6 +38,7 @@ namespace DiplomaProject.MVVM.View
             string SQL = $"SELECT FileSize, FileBlob FROM theory WHERE idtheory={theoryNumber}";
             byte[] dataBuffer = null;
             TextRange range = new TextRange(TextContent.Document.ContentStart, TextContent.Document.ContentEnd);
+            var mainWindow = Application.Current.Windows.OfType<MainWindow>().FirstOrDefault();
 
             try
             {
@@ -59,6 +61,7 @@ namespace DiplomaProject.MVVM.View
                     {
                         StreamReader sr = new StreamReader(ms);
                         rtfText = sr.ReadToEnd();
+                        mainWindow.TheoryText = rtfText;
                     }
                 }
                 //вывод данных в ртб
@@ -76,14 +79,16 @@ namespace DiplomaProject.MVVM.View
 
         private void OpenReaderBtn_Click(object sender, RoutedEventArgs e)
         {
-            TheoryReader TheoryWindow = new TheoryReader();
-            TheoryWindow.Show();
+
+                TheoryReader TheoryWindow = new TheoryReader();
+                TheoryWindow.Show();
 
         }
 
         private void EcpBasics_Click(object sender, RoutedEventArgs e)
         {
             getTheory(1, TextContent);
+            
         }
 
         private void EcpMethods_Click(object sender, RoutedEventArgs e)

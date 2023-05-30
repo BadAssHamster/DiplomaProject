@@ -13,9 +13,12 @@ namespace DiplomaProject
     {
         public List<(int userId, string userName)> UserData { get; set; }
         public bool Logon { get; set; }
+
+        public string TheoryText { get; set; }
         public MainWindow()
         {
             InitializeComponent();
+            MessageBox.Show("Полный функционал программы доступен только авторизованным пользователям!", "ВНИМАНИЕ!");
         }
 
         private void ListViewItem_MouseEnter(object sender, MouseEventArgs e)

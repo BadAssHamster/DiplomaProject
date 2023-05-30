@@ -297,7 +297,7 @@
                             Content="Войти"
                             Margin="3,0,3,0" 
                             FontFamily="Fonts/Rubik-regular.ttf #Rubik"
-                            FontSize="10" Click="LoginBtn_Click"
+                            FontSize="9" Click="LoginBtn_Click"
                             />
 
 

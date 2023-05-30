@@ -20,6 +20,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"/>
                 <RowDefinition />
+                <RowDefinition Height="30"/>
             </Grid.RowDefinitions>
 
             <!--// Навигационная панель теоретических блоков //-->
@@ -176,11 +177,18 @@
             </Border>
             <RichTextBox x:Name="TextContent"
                          Grid.Row="1"
-                         Margin="5"
+                         Margin="5,5,5,5"
                          Background="Transparent"
                          Foreground="White" IsReadOnly="True"
                          Style="{StaticResource MaterialDesignRichTextBox}">
             </RichTextBox>
+            <Button x:Name="OpenReaderBtn"
+                    Grid.Row="2"
+                    Content="Во весь экран"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Right"
+                    Style="{StaticResource MaterialDesignFlatAccentButton}"
+                    Click="OpenReaderBtn_Click"/>
 
         </Grid>
 

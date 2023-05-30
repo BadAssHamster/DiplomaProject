@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,7 +22,10 @@ namespace DiplomaProject
     {
         public TheoryReader()
         {
+            var mainWindow = Application.Current.Windows.OfType<MainWindow>().FirstOrDefault();
             InitializeComponent();
+            TextRange range = new TextRange(Content.Document.ContentStart, Content.Document.ContentEnd);
+            range.Load(new MemoryStream(Encoding.UTF8.GetBytes(mainWindow.TheoryText)), DataFormats.Rtf);
         }
 
         private void ReaderCloseBtn_Click(object sender, RoutedEventArgs e)
@@ -29,9 +33,5 @@ namespace DiplomaProject
             this.Close();
         }
 
-        private void Content_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
     }
 }
