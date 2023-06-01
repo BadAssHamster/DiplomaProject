@@ -75,7 +75,9 @@
                     Margin="138,0,50,10"
                     Content="Тест 3"
                     FontFamily="Rubik Medium"
-                    FontSize="20"/>
+                    FontSize="20"
+                    Command="{Binding DataContext.InstTestCommand, 
+                    RelativeSource={RelativeSource AncestorType={x:Type Window}}}"/>
 
         </StackPanel>
         

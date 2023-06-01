@@ -72,7 +72,7 @@
                 HorizontalAlignment="Left"
                 Margin="100,0,0,0"
                 Background="#1CCD00"
-                BorderThickness="0" Click="CheckBtn_Click"/>
+                BorderThickness="0" Click="CheckBtn_Click" IsDefault="True"/>
 
         <Button x:Name="NextBtn"
                 Grid.Row="4"

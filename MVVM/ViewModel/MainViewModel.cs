@@ -15,6 +15,7 @@ namespace DiplomaProject.MVVM.ViewModel
         public ICommand ChooseTestCommand { get; set; }
         public ICommand EcpTestCommand { get; set; }
         public ICommand BscpTestCommand { get; set; }
+        public ICommand InstTestCommand { get; set; }
         public ICommand ChallengeCommand { get; set; }
         public RelayCommand ChallengeAccessCommand { get; set; }
         public RelayCommand RegisterCommand { get; set; }
@@ -23,6 +24,7 @@ namespace DiplomaProject.MVVM.ViewModel
         public ChooseTestViewModel ChooseTestVM { get; set; }
         public EcpTestViewModel EcpTestVM { get; set; } 
         public BscpTestViewModel BscpTestVM { get; set; }
+        public InstTestViewModel InstTestVM { get; set; }
         public ChallengeViewModel ChallengeVM { get; set; }
         public ChallengeAccessViewModel ChallengeAccessVM { get; set; }
         public RegisterViewModel RegisterVM { get; set; }
@@ -58,6 +60,7 @@ namespace DiplomaProject.MVVM.ViewModel
             ChooseTestVM = new ChooseTestViewModel();
             EcpTestVM = new EcpTestViewModel();
             BscpTestVM = new BscpTestViewModel();
+            InstTestVM = new InstTestViewModel();
             ChallengeAccessVM = new ChallengeAccessViewModel();
             ChallengeVM = new ChallengeViewModel();
             RegisterVM = new RegisterViewModel();
@@ -81,6 +84,10 @@ namespace DiplomaProject.MVVM.ViewModel
             BscpTestCommand = new RelayCommand(o =>
             {
                 CurrentView = BscpTestVM;
+            });
+            InstTestCommand = new RelayCommand(o =>
+            {
+                CurrentView = InstTestVM;
             });
 
             ChallengeAccessCommand = new RelayCommand(o =>
